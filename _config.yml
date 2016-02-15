@@ -1,0 +1,41 @@
+# Site settings
+title: GorillaGive
+description: 'Coming Soon!'
+url: 'http://gorillagive.io'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'GorillaGive'
+  email: info@gorillagive.io
+  twitter_username: gorillagive
+  facebook_username: gorillagive
+  github_username:  gorillagive
+  linkedin_username:  gorilla-give
+  instagram_username: gorillagive
+  feed:
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
