@@ -1,5 +1,5 @@
 ---
-title:  "Welcome to GorillaGive!"
+title:  "Announcing GorillaGive!"
 date:   2016-02-14 9:50:23
 categories: [gorillagive]
 tags: [gorillagive]
