@@ -9,7 +9,7 @@ Background from William Braik
 ### Theme
 
 Theme is from
-[Theme](http://joshgerdes.com/jekyll-uno/)
+[Josh Gerdes](http://joshgerdes.com/jekyll-uno/)
 
 ![jekyll-uno - free Jekyll theme](/screenshot.png)
 
