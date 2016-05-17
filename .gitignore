@@ -4,3 +4,9 @@ _site
 *.sublime-project
 *.sublime-workspace
 .DS_Store
+*.DS_Store*
+.idea
+_sass
+css
+Gemfile.lock
+Gemefile

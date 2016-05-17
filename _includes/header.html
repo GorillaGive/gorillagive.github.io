@@ -1,111 +1,57 @@
-<span class="mobile btn-mobile-menu">
-  <i class="icon icon-list btn-mobile-menu__icon"></i>
-  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-</span>
+<header>
+  <div class="navbar">
+    <div class="navbar-header">
+      <div class="container">
+        <ul class="info pull-left">
+          <li><a href="{{ 'contact' | prepend: site.baseurl }}"><i class="icon-mail-1 contact"></i> {{ site.email }}</a></li>
+          <!-- <li><i class="icon-mobile contact"></i> {{ site.phone }}</li> -->
+        </ul>
+        <ul class="social pull-right">
+          <li><a href="{{ site.facebook_link }}"><i class="icon-s-facebook"></i></a></li>
+          <li><a href="{{ site.twitter_link }}"><i class="icon-s-twitter"></i></a></li>
+          <li><a href="{{ site.instagram_link }}"><i class="icon-s-instagram"></i></a></li>
+          <li><a href="{{ site.pinterest_link }}"><i class="icon-s-pinterest"></i></a></li>
+          <li><a href="{{ site.github_link }}"><i class="icon-s-github"></i></a></li>
+          <li><a href="{{ site.linkedin_link }}"><i class="icon-s-linkedin"></i></a></li>
 
-<header class="panel-cover" style="background-image: url({{ "images/cover.jpg" | prepend: site.baseurl }})">
-  <div class="panel-main">
-
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
-        <a href="{{ site.baseurl }}" title="link to home of {{ site.title }}">
-          <img src="{{ "images/profile.jpg" | prepend: site.baseurl }}" class="user-image" alt="My Profile Photo">
-          <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
-        </a>
-        <hr class="panel-cover__divider">
-        <p class="panel-cover__description">{{ site.description }}</p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary">
-
-        <div class="navigation-wrapper">
-
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}#blog" title="link to {{ site.title }} blog" class="blog-button">Blog</a></li>
-            </ul>
-          </nav>
-
-          <nav class="cover-navigation navigation--social">
-            <ul class="navigation">
-
-            {% if site.author.twitter_username %}
-              <!-- Twitter -->
-              <li class="navigation__item">
-                <a href="http://twitter.com/{{ site.author.twitter_username }}" title="@{{ site.author.twitter_username }} on Twitter" target="_blank">
-                  <i class="icon icon-social-twitter"></i>
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-            {% endif %}
-
-            {% if site.author.facebook_username %}
-              <!-- Facebook -->
-              <li class="navigation__item">
-                <a href="http://fb.me/{{ site.author.facebook_username }}" title="{{ site.author.facebook_username }} on Facebook" target="_blank">
-                  <i class="icon icon-social-facebook"></i>
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-            {% endif %}
-
-            {% if site.author.instagram_username %}
-              <!-- Instagram -->
-              <li class="navigation__item">
-                <a href="http://instagr.am/{{ site.author.instagram_username }}" title="{{ site.author.instagram_username }} on Instagram" target="_blank">
-                  <i class="icon icon-social-instagram"></i>
-                  <span class="label">Instagram</span>
-                </a>
-              </li>
-            {% endif %}
-
-            {% if site.author.linkedin_username %}
-              <!-- LinkedIn -->
-              <li class="navigation__item">
-                <a href="https://www.linkedin.com/company/{{ site.author.linkedin_username }}" title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
-                  <i class="icon icon-social-linkedin"></i>
-                  <span class="label">LinkedIn</span>
-                </a>
-              </li>
-            {% endif %}
-
-            {% if site.author.github_username %}
-              <!-- GitHub -->
-              <li class="navigation__item">
-                <a href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
-                  <i class="icon icon-social-github"></i>
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
-            {% endif %}
-
-            {% if site.author.email %}
-              <!-- Email -->
-              <li class="navigation__item">
-                <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
-                  <i class="icon icon-mail"></i>
-                  <span class="label">Email</span>
-                </a>
-              </li>
-            {% endif %}
-
-            {% if site.author.feed %}
-            <!-- RSS -->
-            <li class="navigation__item">
-              <a href="{{ "feed.xml" | prepend: site.baseurl }}" title="Subscribe" target="_blank">
-                <i class="icon icon-rss"></i>
-                <span class="label">RSS</span>
-              </a>
-            </li>
-            {% endif %}
-
-            </ul>
-          </nav>
-
-        </div>
-
+        </ul>
+        <a class="navbar-brand" href="{{ site.baseurl }}"><img src="{{ site.path.images | prepend: site.baseurl }}/gorilla-long.png" class="logo" alt=""></a>
+        <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
       </div>
-
     </div>
-
-    <div class="panel-cover--overlay"></div>
+    <div class="yamm">
+      <div class="navbar-collapse collapse">
+        <div class="container">
+          <a class="navbar-brand" href="{{ site.baseurl }}"><img src="{{ site.path.images | prepend: site.baseurl }}/gorilla-long.png" class="logo" alt=""></a>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="{{ site.baseurl }}">Home</a>
+            </li>
+            <li>
+              <a href="{{ 'blog' | prepend: site.baseurl }}">Blog</a>
+            </li>
+            <!--<li>-->
+              <!--<a href="{{ site.baseurl }}events">Events</a>-->
+            <!--</li>-->
+            <li>
+              <a href="{{ 'solutions' | prepend: site.baseurl }}">solutions</a>
+            </li>
+            <li>
+              <a href="{{ 'pricing' | prepend: site.baseurl }}">Pricing</a>
+            </li>
+            <li>
+              <a href="{{ 'about' | prepend: site.baseurl }}">About</a>
+            </li>
+            <li>
+              <a href="{{ 'contact' | prepend: site.baseurl }}">Contact</a>
+            </li>
+            <!-- we can check if a user is logged in and hide this button if so -->
+            <li>
+              <a href="{{ 'signup' | prepend: site.baseurl }}">Signup</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
