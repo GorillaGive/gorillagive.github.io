@@ -1,0 +1,130 @@
+---
+layout: default
+---
+
+<!-- ============================================================= MAIN ============================================================= -->
+
+<main>
+
+    <!-- ============================================================= SECTION – SERVICES ============================================================= -->
+
+    <section id="services">
+        <div class="container inner-top inner-bottom-sm">
+
+            <div class="row">
+                <div class="col-md-8 col-sm-9 center-block text-center">
+                    <header>
+                        <h1>{{ page.title }}</h1>
+                        <p>{{ page.description }}</p>
+                    </header>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+            {% for item in page.solutions %}
+                {% assign last = forloop.length | modulo:2 %}
+                {% assign mod = forloop.index0 | modulo:2 %}
+
+                {% if mod == 0 or forloop.index0 == 0 %}
+                    {% if forloop.first %}
+                        <div class="row inner-top-sm">
+                    {% else %}
+                        <div class="row">
+                    {% endif %}
+
+                {% endif %}
+                            <div class="col-sm-2">
+                                <div class="icon pull-right">
+                                    <i class="{{ item.icon }} icn lg"></i>
+                                </div><!-- /.icon -->
+                            </div><!-- /.col -->
+
+                            <div class="col-sm-4 inner-bottom-sm">
+                                <h2>{{ item.title }}</h2>
+                                <p class="text-small">{{ item.description }}</p>
+                            </div><!-- /.col -->
+
+                {% if mod == 1 %}
+                    </div><!-- /.row -->
+                {% endif %}
+                {% if forloop.last and last != 1 %}
+                        </div><!-- /.row -->
+                {% endif %}
+
+
+            {% endfor %}
+
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ============================================================= SECTION – SERVICES : END ============================================================= -->
+
+
+    <!-- ============================================================= SECTION – WORK SAMPLES ============================================================= -->
+
+    <section id="work-samples" class="dark-bg">
+        <div class="container inner">
+
+            <div class="row">
+                <div class="col-md-8 col-sm-9 center-block text-center">
+                    <header>
+                        <h1>Software</h1>
+                        <p>We working to provide more solutions for you everyday.</p>
+                    </header>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+            <div class="row inner-top-sm">
+                <div class="col-sm-12">
+                    <div id="owl-work-samples" class="owl-carousel owl-item-gap">
+                    {% for app in page.software %}
+                        <div class="item">
+                            <figure>
+
+                                <div class="icon-overlay icn-link">
+                                    {% if app.link %} <a href="portfolio-post.html"> {% endif %}
+                                        <img src="{{ site.path.images }}/{{ app.image }}" alt="">
+                                    {% if app.link %}</a>{% endif %}
+                                </div><!-- /.icon-overlay -->
+
+                                <figcaption class="bordered no-top-border">
+                                    <div class="info">
+                                        <h4><a href="{{ app.page }}">{{ app.title }}</a></h4>
+                                        <p>{{ app.description }}</p>
+                                    </div><!-- /.info -->
+                                </figcaption>
+
+                            </figure>
+                        </div><!-- /.item -->
+                    {% endfor %}
+
+                    </div><!-- /.owl-carousel -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+
+    </section>
+
+    <!-- ============================================================= SECTION – WORK SAMPLES : END ============================================================= -->
+
+
+
+
+    <!-- ============================================================= SECTION – GET IN TOUCH ============================================================= -->
+
+    <section id="get-in-touch" class="tint-bg">
+        <div class="container inner-sm">
+            <div class="row">
+                <div class="col-sm-10 center-block text-center">
+                    <h1 class="single-block">Need help getting started? <a href="contact.html" class="btn btn-large">Get in touch</a></h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ============================================================= SECTION – GET IN TOUCH : END ============================================================= -->
+
+</main>
+
+<!-- ============================================================= MAIN : END ============================================================= -->
+

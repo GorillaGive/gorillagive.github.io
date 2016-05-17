@@ -1,41 +1,75 @@
-# Site settings
-title: GorillaGive
-description: 'Coming Soon!'
-url: 'http://gorillagive.io'
-baseurl: '/'
-# google_analytics: 'UA-XXXXXX-X'
-# disqus_shortname: 'your-disqus-name'
+# Cross site information
+title: Gorilla Give Charity Platform
+company: Gorilla Give
+company_title: Gorilla Give, LLC
+email: info@gorillagive.com
+phone: (123)-456-7890
+address: 107 Spring St
+city: Seattle
+state: WA
+zip: 98104
+description: Here at Gorilla Give we aim to make charity software smarter and affordable. Software shouldn't be your burden.
+baseurl: /
+url: gorillagive.github.io
 
-author:
-  name: 'GorillaGive'
-  email: info@gorillagive.io
-  twitter_username: gorillagive
-  facebook_username: gorillagive
-  github_username:  gorillagive
-  linkedin_username:  gorilla-give
-  instagram_username: gorillagive
-  feed:
+# Social Media Links
+twitter_link: https://twitter.com/GorillaGive
+github_link:  https://github.com/GorillaGive
+facebook_link: https://www.facebook.com/GorillaGive
+linkedin_link: https://www.linkedin.com/company/gorilla-give
+instagram_link: http://instagr.am/gorillagive
+pinterest_link: https://www.pinterest.com/gorillagive/
 
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
-    values:
-        layout: 'post'
+social:
+  linkedin: "https://www.linkedin.com/in/"
+  twitter: "https://twitter.com/"
+
 
 # Build settings
-destination: _site
-paginate: 10
-permalink: /:year/:title/
 markdown: kramdown
-highlighter: rouge
 
-kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
+# Custom Variables
+path:
+  css: assets/css
+  js: assets/js
+  images: assets/images
+  videos: assets/video
+  fonts: assets/fonts
 
-gems: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+profiles:
+  - name: Dustin Graves
+    firstname: Dustin
+    title: Founder/Engineer
+    blurb: "is a Software Engineer with over 10 years of experience in designing technology solutions. Dustin has BS in Information Technology and has worked in several different industries including defense, telematics and media. Dustin can be found hanging out with his family or cycling."
+    gravatar: "http://2.gravatar.com/avatar/5720df6223196d28891dbe8450170dca?s=200"
+    twitter: "gravesdustin"
+    facebook:
+    linkedin: "dustincgraves"
+  - name: Ed Gervais
+    title: Software Engineer
+    gravatar: "http://1.gravatar.com/avatar/8c073619fc9a6acb994d51fad25296e2?s=200"
+    blurb: "Ed is a full stack developer focusing in javascript. Ed enjoys the outdoors and has hiked the Pacific Crest trail from Mexico to Canada."
+    twitter:
+    facebook:
+    linkedin:
+  - name: Ryan Ewing
+    title: Software Engineer
+    gravatar: "https://media.licdn.com/media/AAEAAQAAAAAAAAR1AAAAJDUzZWMxNWVjLWQ1ZGItNGEzMC05N2Y3LTdmM2I4MmUwY2JmZA.jpg"
+    blurb: "Ryan is a Software Engineer with over 10 years of experience crafting web applications. He majored in Discrete Math and Algorithms at University of Washington. When he's not writing code he's out rock climbing or cycling."
+    twitter:
+    facebook:
+    linkedin:
+  - name: Sonia Graves
+    title: Marketing
+    gravatar: "https://media.licdn.com/media/AAEAAQAAAAAAAAXlAAAAJDQ5MzdhOTYyLTViMTItNGE3YS1iMDBlLTU3YjFlMmQzM2RjZg.jpg"
+    blurb: "Sonia is our Marketing Specialist. She has two young daughters and spends her free time decorating cakes for events and crocheting. ."
+    twitter:
+    facebook:
+    linkedin:
+  - name: Doug Brown
+    title: Product Manager
+    gravatar: "https://media.licdn.com/media/AAEAAQAAAAAAAAZDAAAAJGMxNWVhMmFkLTQzMzYtNDVjNi1iZjEyLTM5ZDBjYjkzNGQ0NQ.jpg"
+    blurb: "Doug is an experienced Technical Product Manager and code tinkerer. Doug runs a blog focused on local whiskey distillers in his spare time"
+    twitter:
+    facebook:
+    linkedin:
