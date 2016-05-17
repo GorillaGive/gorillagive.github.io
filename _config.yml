@@ -3,14 +3,14 @@ title: Gorilla Give Charity Platform
 company: Gorilla Give
 company_title: Gorilla Give, LLC
 email: info@gorillagive.com
-phone: (123)-456-7890
+phone:
 address: 107 Spring St
 city: Seattle
 state: WA
 zip: 98104
 description: Here at Gorilla Give we aim to make charity software smarter and affordable. Software shouldn't be your burden.
+url: 'http://gorillagive.io'
 baseurl: /
-url: gorillagive.github.io
 
 # Social Media Links
 twitter_link: https://twitter.com/GorillaGive
