@@ -31,3 +31,36 @@
     $(".changecolor").switchstylesheet( { seperator:"color"} );
   });
 </script>
+
+<script>
+  window.onload = function() {
+    var url = "https://gorilla-beta.firebaseio.com/";
+
+    var firebaseRef = new Firebase(url);
+
+    $.getJSON('//gd.geobytes.com/GetCityDetails?callback=?', function(data) {
+      var ip = data.geobytesremoteip;
+
+      var date = Date();
+      var browser = navigator.userAgent;
+      var platform = navigator.platform;
+
+      var ref = firebaseRef.child("visitor");
+      ref.authAnonymously(function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+        }
+      }, {
+        remember: "sessionOnly"
+      });
+      ref.push({ip: ip, date: date, browser: browser, platform: platform, url: window.location.href });
+
+    });
+
+
+
+
+  };
+</script>
