@@ -44,7 +44,7 @@
       var date = Date();
       var browser = navigator.userAgent;
       var platform = navigator.platform;
-
+      var referrer = document.referrer;
       var ref = firebaseRef.child("visitor");
       ref.authAnonymously(function(error, authData) {
         if (error) {
@@ -55,7 +55,7 @@
       }, {
         remember: "sessionOnly"
       });
-      ref.push({ip: ip, date: date, browser: browser, platform: platform, url: window.location.href });
+      ref.push({ip: ip, date: date, browser: browser, platform: platform, url: window.location.href, referrer: referrer });
 
     });
 
