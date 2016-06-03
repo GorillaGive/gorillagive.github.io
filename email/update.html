@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Tempo-Responsive Email Template</title>
+
+      <style type="text/css">
+         /* Client-specific Styles */
+         div, p, a, li, td { -webkit-text-size-adjust:none; }
+         #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+         html{width: 100%; }
+         body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+         /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+         .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing. */
+         #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+         img {outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;}
+         a img {border:none;}
+         .image_fix {display:block;}
+         p {margin: 0px 0px !important;}
+         table td {border-collapse: collapse;}
+         table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+         a {color: #33b9ff;text-decoration: none;text-decoration:none!important;}
+         /*STYLES*/
+         table[class=full] { width: 100%; clear: both; }
+         /*IPAD STYLES*/
+         @media only screen and (max-width: 640px) {
+         a[href^="tel"], a[href^="sms"] {
+         text-decoration: none;
+         color: #33b9ff; /* or whatever your want */
+         pointer-events: none;
+         cursor: default;
+         }
+         .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+         text-decoration: default;
+         color: #33b9ff !important;
+         pointer-events: auto;
+         cursor: default;
+         }
+         table[class=devicewidth] {width: 440px!important;text-align:center!important;}
+         table[class=devicewidthinner] {width: 420px!important;text-align:center!important;}
+         img[class=banner] {width: 440px!important;height:220px!important;}
+         img[class=col2img] {width: 440px!important;height:220px!important;}
+
+
+         }
+         /*IPHONE STYLES*/
+         @media only screen and (max-width: 480px) {
+         a[href^="tel"], a[href^="sms"] {
+         text-decoration: none;
+         color: #33b9ff; /* or whatever your want */
+         pointer-events: none;
+         cursor: default;
+         }
+         .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+         text-decoration: default;
+         color: #33b9ff !important;
+         pointer-events: auto;
+         cursor: default;
+         }
+         table[class=devicewidth] {width: 280px!important;text-align:center!important;}
+         table[class=devicewidthinner] {width: 260px!important;text-align:center!important;}
+         img[class=banner] {width: 280px!important;height:140px!important;}
+         img[class=col2img] {width: 280px!important;height:140px!important;}
+
+
+         }
+      </style>
+   </head>
+   <body>
+<!-- Start of preheader -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader" >
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                           <tbody>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="20"></td>
+                              </tr>
+                              <!-- Spacing -->
+                              <!-- <tr>
+                                 <td width="100%" align="left" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828" st-content="preheader">
+                                    Can't see this Email? View it in your <a href="http://gorillagive.com/email/update.html" style="text-decoration: none; color: #F27A24">Browser </a>
+                                 </td>
+                              </tr> -->
+                              <!-- Spacing -->
+                              <tr>
+                                 <td width="100%" height="20"></td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of preheader -->
+<!-- Start of header -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="header">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table width="600" bgcolor="#549FD4" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <!-- logo -->
+                                    <table bgcolor="#282828" width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                       <tbody>
+                                          <tr>
+                                             <td width="140" height="50" align="center">
+                                                <div class="imgpop">
+                                                   <a target="_blank" href="http://gorillagive.com">
+                                                   <img src="https://firebasestorage.googleapis.com/v0/b/firebase-gorilla-give.appspot.com/o/gg-text-black.png?alt=media&token=e91e8ac0-e23c-41bd-8891-5af10b2bca99" alt="" border="0" width="250" height="50" style="background-color:white; display:block; border:none; outline:none; text-decoration:none;">
+                                                   </a>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- end of logo -->
+                                    <!-- start of menu -->
+                                    <table bgcolor="#549FD4" width="250" height="50" border="0" align="right" valign="middle" cellpadding="0" cellspacing="0" border="0" class="devicewidth">
+                                       <tbody>
+                                          <tr>
+                                             <td height="50" align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828" st-content="menu">
+                                                <a href="http://gorillagive.com" style="color: #282828;text-decoration: none;">Home</a>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <a href="http://gorillagive.com/blog" style="color: #282828;text-decoration: none;">Blog</a>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <a href="http://gorillagive.com/contact" style="color: #282828;text-decoration: none;">Contact</a>
+                                                &nbsp;&nbsp;&nbsp;
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- end of menu -->
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of Header -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+ <!-- Start of main-banner -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="banner">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                           <tbody>
+                              <tr>
+                                 <!-- start of image -->
+                                 <td align="center" st-image="banner-image">
+                                    <div class="imgpop">
+                                       <a target="_blank" href="http://gorillagive.com"><img width="300" border="0" height="300" alt="" border="0" style="display:block; border:none; outline:none; text-decoration:none;" src="https://firebasestorage.googleapis.com/v0/b/firebase-gorilla-give.appspot.com/o/head-tall.png?alt=media&token=000126d2-76e1-4874-b827-775f2480c4ff" class="banner"></a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <!-- end of image -->
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of main-banner -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+<!-- start of Full text -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="full-text">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                           <tbody>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td>
+                                    <table width="560" align="center" cellpadding="0" cellspacing="0" border="0" class="devicewidthinner">
+                                       <tbody>
+                                          <!-- Title -->
+                                          <tr>
+                                             <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:center; line-height: 24px;">
+                                                Hello From Gorilla Give!
+                                             </td>
+                                          </tr>
+                                          <!-- End of Title -->
+                                          <!-- spacing -->
+                                          <tr>
+                                             <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                          </tr>
+                                          <!-- End of spacing -->
+                                          <!-- content -->
+                                          <tr>
+                                             <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:center; line-height: 24px;">
+                                               Thank you for showing interest in our live auction and event software beta program. We are very encouraged and motivated by the level of interest generated by our product at the Washington Nonprofit Conference!
+                                               <br><br>We received some great product suggestions from a few of the nonprofit leaders we spoke with. Therefore, in keeping with our mission to always be transparent, we are letting you know that we are working on a re-architecture that has slightly delayed the beta launch.
+                                               <br><br>This is a good thing as it will make a great product even better! We are very dedicated and are still expecting a successful beta launch in the near future. You will receive another email when the beta software is ready for you to use. Please stay tuned and feel free to follow our updates on Facebook and Twitter.
+                                              </td>
+                                          </tr>
+                                          <!-- End of content -->
+                                          <!-- Spacing -->
+                                          <tr>
+                                             <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                                          </tr>
+                                          <!-- Spacing -->
+                                       </tbody>
+                                    </table>
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of Full Text -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+<!-- Start of footer -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="footer">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" bgcolor="#549FD4" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                        <table bgcolor="#549FD4" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                           <tbody>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td>
+                                    <!-- Social icons -->
+                                    <table  width="150" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                       <tbody>
+                                          <tr>
+                                             <td width="43" height="43" align="center">
+                                                <div class="imgpop">
+                                                   <a target="_blank" href="#">
+                                                   <img src="https://firebasestorage.googleapis.com/v0/b/firebase-gorilla-give.appspot.com/o/facebook.png?alt=media&token=2b0c5863-4ecc-44b7-9d1e-a2d8234acbc2" alt="" border="0" width="43" height="43" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                   </a>
+                                                </div>
+                                             </td>
+                                             <td align="left" width="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                             <td width="43" height="43" align="center">
+                                                <div class="imgpop">
+                                                   <a target="_blank" href="#">
+                                                   <img src="https://firebasestorage.googleapis.com/v0/b/firebase-gorilla-give.appspot.com/o/twitter.png?alt=media&token=1304d5ed-c4de-4435-b319-410853241caf" alt="" border="0" width="43" height="43" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                   </a>
+                                                </div>
+                                             </td>
+                                             <td align="left" width="20" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                                             <td width="43" height="43" align="center">
+                                                <div class="imgpop">
+                                                   <a target="_blank" href="#">
+                                                   <img src="https://firebasestorage.googleapis.com/v0/b/firebase-gorilla-give.appspot.com/o/linkedin.png?alt=media&token=58408fe5-0e60-4565-be69-81240896526d" alt="" border="0" width="43" height="43" style="display:block; border:none; outline:none; text-decoration:none;">
+                                                   </a>
+                                                </div>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- end of Social icons -->
+                                 </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                 <td height="10" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                              <!-- Spacing -->
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of footer -->
+<!-- Start of Postfooter -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="postfooter" >
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <!-- Spacing -->
+                  <tr>
+                     <td width="100%" height="20"></td>
+                  </tr>
+                  <!-- Spacing -->
+                  <tr>
+                     <td align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828" st-content="preheader">
+                        You are recieving this message because you signed up for information about our BETA program? If you no longer want to be notified about our upcoming BETA please reply "Unsubscribe".
+                     </td>
+                  </tr>
+                  <!-- Spacing -->
+                  <tr>
+                     <td width="100%" height="20"></td>
+                  </tr>
+                  <!-- Spacing -->
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of postfooter -->
+   </body>
+   </html>
