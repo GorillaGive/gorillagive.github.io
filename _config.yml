@@ -45,31 +45,3 @@ profiles:
     twitter: "gravesdustin"
     facebook:
     linkedin: "dustincgraves"
-  - name: Ed Gervais
-    title: Software Engineer
-    gravatar: "http://1.gravatar.com/avatar/8c073619fc9a6acb994d51fad25296e2?s=200"
-    blurb: "Ed is a full stack developer focusing in javascript. Ed enjoys the outdoors and has hiked the Pacific Crest trail from Mexico to Canada."
-    twitter:
-    facebook:
-    linkedin:
-  - name: Ryan Ewing
-    title: Software Engineer
-    gravatar: "https://media.licdn.com/media/AAEAAQAAAAAAAAR1AAAAJDUzZWMxNWVjLWQ1ZGItNGEzMC05N2Y3LTdmM2I4MmUwY2JmZA.jpg"
-    blurb: "Ryan is a Software Engineer with over 10 years of experience crafting web applications. He majored in Discrete Math and Algorithms at University of Washington. When he's not writing code he's out rock climbing or cycling."
-    twitter:
-    facebook:
-    linkedin:
-  - name: Sonia Graves
-    title: Marketing
-    gravatar: "https://media.licdn.com/media/AAEAAQAAAAAAAAXlAAAAJDQ5MzdhOTYyLTViMTItNGE3YS1iMDBlLTU3YjFlMmQzM2RjZg.jpg"
-    blurb: "Sonia is our Marketing Specialist. She has two young daughters and spends her free time decorating cakes for events and crocheting. ."
-    twitter:
-    facebook:
-    linkedin:
-  - name: Doug Brown
-    title: Product Manager
-    gravatar: "https://media.licdn.com/media/AAEAAQAAAAAAAAZDAAAAJGMxNWVhMmFkLTQzMzYtNDVjNi1iZjEyLTM5ZDBjYjkzNGQ0NQ.jpg"
-    blurb: "Doug is an experienced Technical Product Manager and code tinkerer. Doug runs a blog focused on local whiskey distillers in his spare time"
-    twitter:
-    facebook:
-    linkedin:
