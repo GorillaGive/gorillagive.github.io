@@ -11,6 +11,7 @@ zip: 98104
 description: Here at Gorilla Give we aim to make charity software smarter and affordable. Software shouldn't be your burden.
 url: 'http://gorillagive.io'
 baseurl: /
+copyright: 2016 - 2018
 
 # Social Media Links
 twitter_link: https://twitter.com/GorillaGive
