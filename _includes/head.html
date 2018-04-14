@@ -10,7 +10,7 @@
   <meta name="keywords" content="fundraising, non-profit,not for profit,software,platform,charity,giving,auction,live auction,gala, apps, app store">
   <meta name="p:domain_verify" content="621716bab6fa9bdeafd8d121510f67c4"/>
 
-  <title>{% if page.title %}{{ page.title | escape }} • {{ site.company }}{% else %}{{ site.company | escape }} • {{ site.tagline | escape }}{% endif %}</title>
+  <title>{% if page.title and page.title != "Home" %}{{ page.title | escape }} • {{ site.company }}{% else %}{{ site.company | escape }} • {{ site.tagline | escape }}{% endif %}</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="/{{ site.path.css }}/bootstrap.min.css" rel="stylesheet">
