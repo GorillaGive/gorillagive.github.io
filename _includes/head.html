@@ -10,17 +10,17 @@
   <meta name="keywords" content="fundraising, non-profit,not for profit,software,platform,charity,giving,auction,live auction,gala, apps, app store">
   <meta name="p:domain_verify" content="621716bab6fa9bdeafd8d121510f67c4"/>
 
-  <title>{% if page.title %}{{ site.company }} | {{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}/{{ site.company }} | {{ page.title | escape }}{% else %}/{{ site.title | escape }}{% endif %}</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="{{ site.path.css | prepend: site.baseurl }}/bootstrap.min.css" rel="stylesheet">
+  <link href="/{{ site.path.css }}/bootstrap.min.css" rel="stylesheet">
 
   <!-- Customizable CSS -->
-  <link href="{{ site.path.css | prepend: site.baseurl }}/main.css" rel="stylesheet" data-skrollr-stylesheet>
-  <link href="{{ site.path.css | prepend: site.baseurl }}/orange.css" rel="stylesheet" title="Color">
-  <link href="{{ site.path.css | prepend: site.baseurl }}/owl.carousel.css" rel="stylesheet">
-  <link href="{{ site.path.css | prepend: site.baseurl }}/owl.transitions.css" rel="stylesheet">
-  <link href="{{ site.path.css | prepend: site.baseurl }}/animate.min.css" rel="stylesheet">
+  <link href="/{{ site.path.css }}/main.css" rel="stylesheet" data-skrollr-stylesheet>
+  <link href="/{{ site.path.css }}/orange.css" rel="stylesheet" title="Color">
+  <link href="/{{ site.path.css }}/owl.carousel.css" rel="stylesheet">
+  <link href="/{{ site.path.css }}/owl.transitions.css" rel="stylesheet">
+  <link href="/{{ site.path.css }}/animate.min.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Lato:400,900,300,700" rel="stylesheet">
@@ -28,30 +28,30 @@
   <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
 
   <!-- Icons/Glyphs -->
-  <link href="{{ site.path.fonts | prepend: site.baseurl }}/fontello.css" rel="stylesheet">
+  <link href="/{{ site.path.fonts }}/fontello.css" rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.path.images | prepend: site.baseurl }}/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192"  href="{{ site.path.images | prepend: site.baseurl }}/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.path.images | prepend: site.baseurl }}/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="{{ site.path.images | prepend: site.baseurl }}/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.path.images | prepend: site.baseurl }}/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="{{ site.path.images | prepend: site.baseurl }}/favicon/manifest.json" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/{{ site.path.images }}/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/{{ site.path.images }}/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/{{ site.path.images }}/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/{{ site.path.images }}/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/{{ site.path.images }}/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/{{ site.path.images }}/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/{{ site.path.images }}/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/{{ site.path.images }}/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/{{ site.path.images }}/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192"  href="/{{ site.path.images }}/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/{{ site.path.images }}/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/{{ site.path.images }}/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/{{ site.path.images }}/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/{{ site.path.images }}/favicon/manifest.json" />
   <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="{{ site.path.images | prepend: site.baseurl }}/favicon/ms-icon-144x144.png" />
+  <meta name="msapplication-TileImage" content="/{{ site.path.images }}/favicon/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
 
   <!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
   <!--[if lt IE 9]>
-    <script src="{{ site.path.js | prepend: site.baseurl }}/html5shiv.js"></script>
-    <script src="{{ site.path.js | prepend: site.baseurl }}/respond.min.js"></script>
+    <script src="/{{ site.path.js }}/html5shiv.js"></script>
+    <script src="/{{ site.path.js }}/respond.min.js"></script>
   <![endif]-->
 </head>
