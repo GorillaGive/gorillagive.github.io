@@ -3,26 +3,26 @@
     <div class="row">
       <div class="col-md-4 col-sm-6 inner">
         <h4>Who we are</h4>
-        <a class="navbar-brand" href="{{ site.baseurl }}"><img class="logo img-intext" src="{{ site.path.images | prepend: site.baseurl }}/gorilla-long.svg" alt=""></a>
+        <a class="navbar-brand" href="/"><img class="logo img-intext" src="/{{ site.path.images }}/gorilla-long.svg" alt=""></a>
         <p>{{ site.description }}</p>
-        <a href="{{ 'about' | prepend: site.baseurl }}" class="txt-btn">More about us</a>
+        <a href="/{{ 'about' }}" class="txt-btn">More about us</a>
       </div>
       <div class="col-md-4 col-sm-6 inner">
         <h4>Solutions</h4>
         <div class="row thumbs gap-xs">
           <div class="col-xs-4 thumb">
             <figure class="icon-overlay icn-link">
-              <a href="#"><img src="{{ site.path.images | prepend: site.baseurl }}/bid.png" alt=""></a>
+              <a href="#"><img src="/{{ site.path.images }}/bid.png" alt=""></a>
             </figure>
           </div>
           <div class="col-xs-4 thumb">
             <figure class="icon-overlay icn-link">
-              <a href="#"><img src="{{ site.path.images | prepend: site.baseurl }}/events.png" alt=""></a>
+              <a href="#"><img src="/{{ site.path.images }}/events.png" alt=""></a>
             </figure>
           </div>
           <div class="col-xs-4 thumb">
             <figure class="icon-overlay icn-link">
-              <a href="#"><img src="{{ site.path.images | prepend: site.baseurl }}/apps.png" alt=""></a>
+              <a href="#"><img src="/{{ site.path.images }}/apps.png" alt=""></a>
             </figure>
           </div>
 
@@ -33,7 +33,7 @@
         <ul class="contacts">
            <li><i class="icon-location contact"></i> {{ site.address }}, {{ site.city }}, {{site.state }}, {{ site.zip }} </li>
            <li><i class="icon-phone contact"></i> {{ site.phone }}</li>
-          <li><a href="{{ 'contact' | prepend: site.baseurl }}"><i class="icon-mail-1 contact"></i> {{ site.email }}</a></li>
+          <li><a href="/{{ 'contact' }}"><i class="icon-mail-1 contact"></i> {{ site.email }}</a></li>
         </ul>
       </div>
     </div>
@@ -42,9 +42,9 @@
     <div class="container inner">
       <p class="pull-left">© {{ site.copyright }} {{ site.company_title }} All rights reserved.</p>
       <ul class="footer-menu pull-right">
-        <li><a href="{{ site.baseurl }}">Home</a></li>
-        <li><a href="{{ 'about' | prepend: site.baseurl }}">About</a></li>
-        <li><a href="{{ 'contact' | prepend: site.baseurl }}">Contact</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/{{ 'about' }}">About</a></li>
+        <li><a href="/{{ 'contact' }}">Contact</a></li>
       </ul>
     </div>
   </div>

@@ -3,51 +3,51 @@
     <div class="navbar-header">
       <div class="container">
         <ul class="info pull-left">
-          <li><a href="{{ 'contact' | prepend: site.baseurl }}"><i class="icon-mail-1 contact"></i> {{ site.email }}</a></li>
+          <li><a href="/{{ 'contact' }}"><i class="icon-mail-1 contact"></i> {{ site.email }}</a></li>
            <li><i class="icon-phone contact"></i> {{ site.phone }}</li>
         </ul>
         <ul class="social pull-right">
-          <li><a href="{{ site.facebook_link }}"><i class="icon-s-facebook"></i></a></li>
-          <li><a href="{{ site.twitter_link }}"><i class="icon-s-twitter"></i></a></li>
-          <li><a href="{{ site.instagram_link }}"><i class="icon-s-instagram"></i></a></li>
-          <li><a href="{{ site.pinterest_link }}"><i class="icon-s-pinterest"></i></a></li>
-          <li><a href="{{ site.github_link }}"><i class="icon-s-github"></i></a></li>
-          <li><a href="{{ site.linkedin_link }}"><i class="icon-s-linkedin"></i></a></li>
+          <li><a href="/{{ site.facebook_link }}"><i class="icon-s-facebook"></i></a></li>
+          <li><a href="/{{ site.twitter_link }}"><i class="icon-s-twitter"></i></a></li>
+          <li><a href="/{{ site.instagram_link }}"><i class="icon-s-instagram"></i></a></li>
+          <li><a href="/{{ site.pinterest_link }}"><i class="icon-s-pinterest"></i></a></li>
+          <li><a href="/{{ site.github_link }}"><i class="icon-s-github"></i></a></li>
+          <li><a href="/{{ site.linkedin_link }}"><i class="icon-s-linkedin"></i></a></li>
 
         </ul>
-        <a class="navbar-brand" href="{{ site.baseurl }}"><img src="{{ site.path.images | prepend: site.baseurl }}/gorilla-long.png" class="logo" alt=""></a>
+        <a class="navbar-brand" href="/"><img src="/{{ site.path.images }}/gorilla-long.png" class="logo" alt=""></a>
         <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
       </div>
     </div>
     <div class="yamm">
       <div class="navbar-collapse collapse">
         <div class="container">
-          <a class="navbar-brand" href="{{ site.baseurl }}"><img src="{{ site.path.images | prepend: site.baseurl }}/gorilla-long.png" class="logo" alt=""></a>
+          <a class="navbar-brand" href="/"><img src="/{{ site.path.images }}/gorilla-long.png" class="logo" alt=""></a>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="{{ site.baseurl }}">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="{{ 'blog' | prepend: site.baseurl }}">Blog</a>
+              <a href="/{{ 'blog' }}">Blog</a>
             </li>
             <!--<li>-->
-              <!--<a href="{{ site.baseurl }}events">Events</a>-->
+              <!--<a href="/{{ site.baseurl }}events">Events</a>-->
             <!--</li>-->
             <li>
-              <a href="{{ 'solutions' | prepend: site.baseurl }}">solutions</a>
+              <a href="/{{ 'solutions' }}">solutions</a>
             </li>
             <li>
-              <a href="{{ 'pricing' | prepend: site.baseurl }}">Pricing</a>
+              <a href="/{{ 'pricing' }}">Pricing</a>
             </li>
             <li>
-              <a href="{{ 'about' | prepend: site.baseurl }}">About</a>
+              <a href="/{{ 'about' }}">About</a>
             </li>
             <li>
-              <a href="{{ 'contact' | prepend: site.baseurl }}">Contact</a>
+              <a href="/{{ 'contact' }}">Contact</a>
             </li>
             <!-- we can check if a user is logged in and hide this button if so -->
             <li>
-              <a href="{{ 'signup' | prepend: site.baseurl }}">Signup</a>
+              <a href="/{{ 'signup' }}">Signup</a>
             </li>
           </ul>
         </div>
