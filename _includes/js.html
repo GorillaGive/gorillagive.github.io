@@ -1,6 +1,26 @@
 <!-- JavaScripts placed at the end of the document so the pages load faster -->
 <script src="/{{ site.path.js }}/jquery.min.js"></script>
 <script src="/{{ site.path.js }}/jquery.easing.1.3.min.js"></script>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+<script type="text/javascript">
+    jQuery(function($){
+        $('.video').vidbg({
+            'm4v': 'assets/video/charity.m4v',
+            'webm': 'assets/video/charity.webm',
+            'poster': 'assets/video/charity.png'
+        }, {
+            // Options
+            muted: true,
+            loop: true,
+            overlay: true,
+            overlayColor: '#506A85',
+            overlayAlpha: 0.8
+        });
+    });
+</script>
+
+<script src="/{{ site.path.js }}/vidbg.min.js"></script>
 <script src="/{{ site.path.js }}/jquery.form.js"></script>
 <script src="/{{ site.path.js }}/jquery.validate.min.js"></script>
 <script src="/{{ site.path.js }}/bootstrap.min.js"></script>
@@ -25,12 +45,12 @@
 <!--<link href="/{{ site.path.css }}/navy.css" rel="alternate stylesheet" title="Navy color">-->
 <!--<link href="/{{ site.path.css }}/gray.css" rel="alternate stylesheet" title="Gray color">-->
 
-<script src="/switchstylesheet/switchstylesheet.js"></script>
-<script>
-  $(document).ready(function(){
-    $(".changecolor").switchstylesheet( { seperator:"color"} );
-  });
-</script>
+<!--<script src="/switchstylesheet/switchstylesheet.js"></script>-->
+<!--<script>-->
+  <!--$(document).ready(function(){-->
+    <!--$(".changecolor").switchstylesheet( { seperator:"color"} );-->
+  <!--});-->
+<!--</script>-->
 <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 <script>
   window.onload = function() {
