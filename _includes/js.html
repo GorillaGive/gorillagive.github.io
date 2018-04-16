@@ -35,55 +35,8 @@
 <script src="/{{ site.path.js }}/viewport-units-buggyfill.js"></script>
 <script src="/{{ site.path.js }}/scripts.js"></script>
 
-<!-- For demo purposes – can be removed on production -->
-<!--<link href="/{{ site.path.css }}/green.css" rel="alternate stylesheet" title="Green color">-->
-<!--<link href="/{{ site.path.css }}/blue.css" rel="alternate stylesheet" title="Blue color">-->
-<!--<link href="/{{ site.path.css }}/red.css" rel="alternate stylesheet" title="Red color">-->
-<!--<link href="/{{ site.path.css }}/pink.css" rel="alternate stylesheet" title="Pink color">-->
-<!--<link href="/{{ site.path.css }}/purple.css" rel="alternate stylesheet" title="Purple color">-->
 <link href="/{{ site.path.css }}/orange.css" rel="alternate stylesheet" title="Orange color">
-<!--<link href="/{{ site.path.css }}/navy.css" rel="alternate stylesheet" title="Navy color">-->
-<!--<link href="/{{ site.path.css }}/gray.css" rel="alternate stylesheet" title="Gray color">-->
 
-<!--<script src="/switchstylesheet/switchstylesheet.js"></script>-->
-<!--<script>-->
-  <!--$(document).ready(function(){-->
-    <!--$(".changecolor").switchstylesheet( { seperator:"color"} );-->
-  <!--});-->
-<!--</script>-->
-<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-<script>
-  window.onload = function() {
-    var url = "https://gorilla-beta.firebaseio.com/";
-
-    var firebaseRef = new Firebase(url);
-
-    $.getJSON('//gd.geobytes.com/GetCityDetails?callback=?', function(data) {
-      var ip = data.geobytesremoteip;
-
-      var date = Date();
-      var browser = navigator.userAgent;
-      var platform = navigator.platform;
-      var referrer = document.referrer;
-      var ref = firebaseRef.child("visitor");
-      ref.authAnonymously(function(error, authData) {
-        if (error) {
-          console.log("Login Failed!", error);
-        } else {
-          console.log("Authenticated successfully with payload:", authData);
-        }
-      }, {
-        remember: "sessionOnly"
-      });
-      ref.push({ip: ip, date: date, browser: browser, platform: platform, url: window.location.href, referrer: referrer });
-
-    });
-
-
-
-
-  };
-</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
