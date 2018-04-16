@@ -13,6 +13,7 @@ description: Here at Gorilla Give we aim to make charity software smarter and af
 url: 'http://gorillagive.com'
 baseurl: /
 copyright: 2016 - 2018
+include: [".well-known"]
 
 # Social Media Links
 twitter_link: https://twitter.com/GorillaGive
