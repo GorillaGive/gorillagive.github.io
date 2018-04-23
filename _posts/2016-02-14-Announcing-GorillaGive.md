@@ -6,6 +6,7 @@ categories: [gorillagive]
 tags: [gorillagive]
 image: website.png
 day: 14
+year: 2016
 month: Feb
 class: post
 format: format-image
@@ -17,5 +18,5 @@ The entire platform will be zero cost for entry with options for affordable paid
 
 Check us out on our social media pages. [gorillagive.io][gorillagive] If you have questions, you can send us an email: [info@gorillagive.io][email].
 
-[gorillagive]:      http://gorillagive.io
-[email]: mailto:info@gorillagive.io
+[gorillagive]:      http://gorillagive.com
+[email]: mailto:info@gorillagive.com

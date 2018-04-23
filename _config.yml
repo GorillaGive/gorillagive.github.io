@@ -14,6 +14,8 @@ url: 'http://gorillagive.com'
 baseurl: /
 copyright: 2016 - 2018
 include: [".well-known"]
+app_link: https://app.gorillagive.com
+support: https://suppport.gorillagive.com
 
 # Social Media Links
 twitter_link: https://twitter.com/GorillaGive
@@ -27,6 +29,10 @@ social:
   linkedin: "https://www.linkedin.com/in/"
   twitter: "https://twitter.com/"
 
+collections:
+  apps:
+    output: true
+    permalink: /apps/:path/
 
 # Build settings
 markdown: kramdown

@@ -28,6 +28,7 @@ software:
     - title: App Store
       description: Company Built and User Submitted Apps
       image: apps.png
+      link: https://app.gorillagive.com
 
 
 #Through the use of our mobile app, hosts can upload lists of items for auction, and users can bid on items during an event."

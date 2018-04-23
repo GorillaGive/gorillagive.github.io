@@ -1,0 +1,145 @@
+---
+layout: default
+---
+
+<!-- ============================================================= MAIN ============================================================= -->
+
+<main>
+
+    <!-- ============================================================= SECTION – PORTFOLIO POST ============================================================= -->
+
+    <section id="portfolio-post">
+        <div class="container inner-top-md">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <div id="owl-work" class="owl-carousel owl-inner-pagination owl-inner-nav owl-ui-md">
+                        {% for image in page.images %}
+                        <div class="item">
+                            <figure>
+                                <img src="/{{ site.path.images }}/{{ image.title }}" alt="">
+                            </figure>
+                        </div><!-- /.item -->
+                        {% endfor %}
+                    </div><!-- /.owl-carousel -->
+                </div><!-- /.col -->
+
+                <div class="col-md-4 inner-left-sm">
+                    <header>
+                        <h2>{{ page.title}}</h2>
+                        <p class="text-small">{{ page.subtitle }}</p>
+                        <p class="text-small">{{ page.content }}</p>
+
+                        <ul class="item-details inner-top-xs outer-top-xs border-top">
+                            <li class="date">{{ page.month }} {{page.day}}, {{ page.year }}</li>
+                            <li class="categories">{{ page.tags }}</li>
+                            <li class="client">Gorilla Give</li>
+                            <li class="url"><a href="https://app.gorillagive.com">app.gorillagive.com</a></li>
+                        </ul><!-- /.item-details -->
+                    </header>
+                </div><!-- /.col -->
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+
+    </section>
+
+    <!-- ============================================================= SECTION – PORTFOLIO POST : END ============================================================= -->
+
+
+    <!-- ============================================================= SECTION – MORE WORKS ============================================================= -->
+
+    <section id="more-works">
+        <div class="container inner-top-sm inner-bottom">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="accordion" class="panel-group blank">
+                        <div class="panel panel-default">
+
+                            <div class="panel-heading text-center">
+                                <h4 class="panel-title">
+                                    <a class="panel-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#content">
+                                        <span>More apps</span>
+                                    </a>
+                                </h4>
+                            </div><!-- /.panel-heading -->
+
+                            <div id="content" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="portfolio">
+
+                                        <ul class="filter text-center">
+                                            <li><a href="#" data-filter="*" class="active">All</a></li>
+                                            <li><a href="#" data-filter=".auction">Auction</a></li>
+                                            <li><a href="#" data-filter=".segment">Segment</a></li>
+                                        </ul><!-- /.filter -->
+
+                                        <ul class="isotope items col-3">
+                                            {% for app in site.apps %}
+                                            <li class="item thumb auction segment">
+                                                <a href="{{ app.url }}">
+                                                    <figure>
+                                                        <figcaption class="text-overlay">
+                                                            <div class="info">
+                                                                <h4>{{ app.title }}</h4>
+                                                                <p>{{ app.subtitle }}</p>
+                                                            </div><!-- /.info -->
+                                                        </figcaption>
+                                                        <img src="/{{ site.path.images }}/{{ app.images[0].title }}" alt="{{ app.title }} Image">
+                                                    </figure>
+                                                    <!--</a>-->
+                                            </li><!-- /.item -->
+                                            {% endfor %}
+                                        </ul><!-- /.items -->
+
+                                    </div><!-- /.portfolio -->
+                                </div><!-- /.panel-body -->
+                            </div><!-- /.content -->
+
+                        </div><!-- /.panel -->
+                    </div><!-- /.accordion -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ============================================================= SECTION – MORE WORKS : END ============================================================= -->
+
+
+    <!-- ============================================================= SECTION – SHARE ============================================================= -->
+
+    <section id="share" class="light-bg">
+        <div class="container">
+
+            <div class="col-sm-4 reset-padding">
+                <a href="{{ site.facebook_link }}" class="btn-share-md">
+                    <p class="name">Facebook</p>
+                    <i class="icon-s-facebook"></i>
+                    <!--<p class="counter">1080</p>-->
+                </a>
+            </div><!-- /.col -->
+
+            <div class="col-sm-4 reset-padding">
+                <a href="{{ site.twitter_link }}" class="btn-share-md">
+                    <p class="name">Twitter</p>
+                    <i class="icon-s-twitter"></i>
+                    <!--<p class="counter">1263</p>-->
+                </a>
+            </div><!-- /.col -->
+
+            <div class="col-sm-4 reset-padding">
+                <a href="{{ site.instagram_link }}" class="btn-share-md">
+                    <p class="name">Instagram</p>
+                    <i class="icon-s-instagram"></i>
+                    <!--<p class="counter">963</p>-->
+                </a>
+            </div><!-- /.col -->
+
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ============================================================= SECTION – SHARE : END ============================================================= -->
+
+</main>
+
+<!-- ============================================================= MAIN : END ============================================================= -->

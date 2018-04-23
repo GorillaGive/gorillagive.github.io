@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<!-- ============================================================= MAIN ============================================================= -->
+
+<main>
+
+    <!-- ============================================================= SECTION – PORTFOLIO ============================================================= -->
+
+    <section id="portfolio">
+
+        <div class="container inner">
+            <div class="row">
+                <div class="col-md-8 col-sm-9 center-block text-center">
+                    <header>
+                        <h1>Gorilla Give Apps</h1>
+                        <p>Check out our growing selection of apps.</p>
+                    </header>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+
+        <div class="container inner-bottom">
+            <div class="row">
+                <div class="col-sm-12 portfolio">
+
+                    <ul class="filter text-center">
+                        <li><a href="#" data-filter="*" class="active">All</a></li>
+                        <li><a href="#" data-filter=".auction">Auction</a></li>
+                        <li><a href="#" data-filter=".segment">Segment</a></li>
+                    </ul><!-- /.filter -->
+
+                    <ul class="isotope items col-3">
+                        {% for app in site.apps %}
+                        <li class="item thumb auction segment">
+                            <a href="{{ app.url }}">
+                                <figure>
+                                    <figcaption class="text-overlay">
+                                        <div class="info">
+                                            <h4>{{ app.title }}</h4>
+                                            <p>{{ app.subtitle }}</p>
+                                        </div><!-- /.info -->
+                                    </figcaption>
+                                    <img src="/{{ site.path.images }}/{{ app.images[0].title }}" alt="{{ app.title }} Image">
+                                </figure>
+                            <!--</a>-->
+                        </li><!-- /.item -->
+                        {% endfor %}
+                    </ul><!-- /.items -->
+
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ============================================================= SECTION – PORTFOLIO : END ============================================================= -->
+
+
+    <!-- ============================================================= SECTION – SHARE ============================================================= -->
+
+    <section id="share" class="light-bg">
+        <div class="container">
+
+            <div class="col-sm-4 reset-padding">
+                <a href="{{ site.facebook_link }}" class="btn-share-md">
+                    <p class="name">Facebook</p>
+                    <i class="icon-s-facebook"></i>
+                    <!--<p class="counter">1080</p>-->
+                </a>
+            </div><!-- /.col -->
+
+            <div class="col-sm-4 reset-padding">
+                <a href="{{ site.twitter_link }}" class="btn-share-md">
+                    <p class="name">Twitter</p>
+                    <i class="icon-s-twitter"></i>
+                    <!--<p class="counter">1263</p>-->
+                </a>
+            </div><!-- /.col -->
+
+            <div class="col-sm-4 reset-padding">
+                <a href="{{ site.instagram_link }}" class="btn-share-md">
+                    <p class="name">Instagram</p>
+                    <i class="icon-s-instagram"></i>
+                    <!--<p class="counter">963</p>-->
+                </a>
+            </div><!-- /.col -->
+
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ============================================================= SECTION – SHARE : END ============================================================= -->
+
+</main>
+
+<!-- ============================================================= MAIN : END ============================================================= -->

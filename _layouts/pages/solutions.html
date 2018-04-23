@@ -81,14 +81,14 @@ layout: default
                             <figure>
 
                                 <div class="icon-overlay icn-link">
-                                    {% if app.link %} <a href="portfolio-post.html"> {% endif %}
+                                    {% if app.link %} <a href="{{ app.link }}"> {% endif %}
                                         <img src="{{ site.path.images }}/{{ app.image }}" alt="">
                                     {% if app.link %}</a>{% endif %}
                                 </div><!-- /.icon-overlay -->
 
                                 <figcaption class="bordered no-top-border">
                                     <div class="info">
-                                        <h4><a href="{{ app.page }}">{{ app.title }}</a></h4>
+                                        <h4><a href="{{ app.link }}">{{ app.title }}</a></h4>
                                         <p>{{ app.description }}</p>
                                     </div><!-- /.info -->
                                 </figcaption>

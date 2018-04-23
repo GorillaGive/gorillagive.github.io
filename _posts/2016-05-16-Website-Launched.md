@@ -4,6 +4,7 @@ title: New Website Launched
 data-filter: format-standard
 day: 16
 month: May
+year: 2016
 icon: icon-edit
 class: post
 format: format-image

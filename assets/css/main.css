@@ -1833,6 +1833,13 @@ aside .thumb figure {
     background: #3B5998;
     background: #4668B3;
 }
+.btn-share-lg:hover .icon-s-instagram:after,
+.btn-share-md:hover .icon-s-instagram:after,
+.btn-share-sm:hover .icon-s-instagram:after,
+.btn-share-xs:hover .icon-s-instagram:after {
+	background: #bc2a8d;
+	background: #bc2a8d;
+}
 .btn-share-lg:hover .icon-s-gplus:after,
 .btn-share-md:hover .icon-s-gplus:after,
 .btn-share-sm:hover .icon-s-gplus:after,
@@ -1995,8 +2002,8 @@ p .btn {
     background: #D94348;
 }
 .social a .icon-s-instagram:after {
-    background: #125688;
-    background: #125688;
+	background: #bc2a8d;
+	background: #bc2a8d;
 }
 .social a .icon-s-behance:after {
     background: #1769FF;
