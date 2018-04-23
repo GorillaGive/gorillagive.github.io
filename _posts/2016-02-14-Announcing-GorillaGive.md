@@ -16,7 +16,7 @@ We are working quickly to launch our new charity platform. We are excited to bri
 
 The entire platform will be zero cost for entry with options for affordable paid features.  We are listening to concerns of the non profit community and providing solutions that do more than the status quo.
 
-Check us out on our social media pages. [gorillagive.io][gorillagive] If you have questions, you can send us an email: [info@gorillagive.io][email].
+Check us out on our social media pages. [gorillagive.com][gorillagive] If you have questions, you can send us an email: [info@gorillagive.com][email].
 
 [gorillagive]:      http://gorillagive.com
 [email]: mailto:info@gorillagive.com
