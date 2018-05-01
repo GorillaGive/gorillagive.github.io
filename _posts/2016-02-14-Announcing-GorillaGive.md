@@ -18,5 +18,5 @@ The entire platform will have no cost for entry with options for affordable paid
 
 Check us out on our social media pages. [gorillagive.com][gorillagive] If you have questions, you can send us an email: [info@gorillagive.com][email].
 
-[gorillagive]:      http://gorillagive.com
+[gorillagive]:      https://gorillagive.com
 [email]: mailto:info@gorillagive.com

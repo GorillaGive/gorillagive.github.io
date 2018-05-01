@@ -10,7 +10,7 @@ city: Bellevue
 state: WA
 zip: 98004
 description: Here at Gorilla Give we aim to make charity software smarter and affordable. Software shouldn't be your burden.
-url: 'http://gorillagive.com'
+url: 'https://gorillagive.com'
 baseurl: /
 copyright: 2016 - 2018
 include: [".well-known"]
@@ -22,7 +22,7 @@ twitter_link: https://twitter.com/GorillaGive
 github_link:  https://github.com/GorillaGive
 facebook_link: https://www.facebook.com/GorillaGive
 linkedin_link: https://www.linkedin.com/company/gorilla-give
-instagram_link: http://instagr.am/gorillagive
+instagram_link: https://instagr.am/gorillagive
 pinterest_link: https://www.pinterest.com/gorillagive/
 
 social:
@@ -50,7 +50,7 @@ profiles:
     firstname: Dustin
     title: Founder/Engineer
     blurb: "is a Software Engineer with over 10 years of experience in designing technology solutions. Dustin has BS in Information Technology and has worked in several different industries including defense, telematics and media. Dustin can be found hanging out with his family or cycling."
-    gravatar: "http://2.gravatar.com/avatar/5720df6223196d28891dbe8450170dca?s=200"
+    gravatar: "https://2.gravatar.com/avatar/5720df6223196d28891dbe8450170dca?s=200"
     twitter: "gravesdustin"
     facebook:
     linkedin: "dustincgraves"
