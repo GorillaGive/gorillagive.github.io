@@ -2,125 +2,67 @@
 layout: default
 ---
 
-<!-- ============================================================= MAIN ============================================================= -->
 
-<main>
-
-    <!-- ============================================================= SECTION – HERO ============================================================= -->
-
-    <section id="hero" class="img-bg-bottom img-bg-soft tint-bg" style="background-image: url(assets/images/art/slider03.jpg);">
-        <div class="container inner">
+<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('/{{site.path.images}}/seattle.png');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <h1 class="title">About Us</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main main-raised">
+    <div class="container">
+        <div class="section-space"></div>
+        <div class="about-description">
             <div class="row">
-                <div class="col-sm-10">
-                    <header>
-                        <h1>Hi, we are {{ site.company }} — <br>Fundraising Event Software</h1>
-                    </header>
-                </div><!-- /.col -->
-            </div><!-- ./row -->
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – HERO : END ============================================================= -->
-
-
-    <!-- ============================================================= SECTION – WHO WE ARE ============================================================= -->
-
-    <section id="who-we-are">
-        <div class="container inner-md">
-            <div class="row inner-top-xs">
-
-                <div class="col-sm-6 inner-right-xs inner-bottom-xs">
-                    <h2>Who we are</h2>
-                    <p>{{ page.who }}</p>
-                </div><!-- /.col -->
-
-                <div class="col-sm-6 inner-left-xs inner-bottom-xs">
-                    <h2>What we do</h2>
-                    <p>{{ page.what }}</p>
-                </div><!-- /.col -->
-
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – WHO WE ARE : END ============================================================= -->
-
-
-    <!-- ============================================================= SECTION – TEAM ============================================================= -->
-
-    <section id="team" class="light-bg">
-        <div class="container inner-top inner-bottom-sm">
-
+                <div class="col-md-10 ml-auto mr-auto">
+                    <h2>The Idea</h2>
+                    <h5>{{ page.origin1 }}</h5>
+                    <h5>{{ page.origin2 }}</h5>
+                    <h5>{{ page.origin3 }}</h5>
+                    <h2>The Solution</h2>
+                    <h5>{{ page.today }}</h5>
+                    <h2>Our Commitment</h2>
+                    <h5>{{ page.commitment }}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="about-team team-1">
             <div class="row">
-                <div class="col-md-8 col-sm-10 center-block text-center">
-                    <header>
-                        <h1>{{ page.header }}</h1>
-                        <p>{{ page.description }}</p>
-                    </header>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-            {% for person in site.profiles %}
-                {% assign last = forloop.length | modulo:3 %}
-                {% assign mod = forloop.index0 | modulo:3 %}
-
-                {% if mod == 0 or forloop.index0 == 0 %}
-                    {% if forloop.first %}
-                        <div class="row inner-top-sm text-center">
-                    {% else %}
-                        <div class="row text-center">
-                    {% endif %}
-                {% endif %}
-                    <div class="col-sm-4 inner-bottom-sm inner-left inner-right">
-                        <figure class="member">
-
-                            <div class="icon-overlay icn-link">
-                                <a href="#"><img src="{{ person.gravatar }}" class="img-circle"></a>
-                            </div><!-- /.icon-overlay -->
-                            <figcaption>
-                                <h2>
-                                   {{ person.name }}
-                                    <span>{{ person.title }}</span>
-                                </h2>
-                                <blockquote>{{person.firstname}} {{ person.blurb }}</blockquote>
-                                <ul class="social">
-                                    <li><a href="{{ site.social.linkedin }}{{ person.linkedin }}"><i class="icon-s-linkedin"></i></a></li>
-                                    <li><a href="{{ site.social.twitter }}{{ person.twitter }}"><i class="icon-s-twitter"></i></a></li>
-                                </ul><!-- /.social -->
-                            </figcaption>
-                        </figure>
-                    </div><!-- /.col -->
-
-                {% if mod == 2 and forloop.index0 >= 2%}
-                     </div><!-- /.row middle -->
-                {% endif %}
-
-                {% if forloop.last and last != 0 %}
-                    </div><!-- /.row last -->
-                {% endif %}
-            {% endfor %}
-
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – TEAM : END ============================================================= -->
-
-
-
-    <!-- ============================================================= SECTION – GET IN TOUCH ============================================================= -->
-
-    <section id="get-in-touch" class="light-bg img-bg-softer" style="background-image: url(assets/images/art/pattern-background01.jpg);">
-        <div class="container inner-sm">
+                <div class="col-md-8 ml-auto mr-auto text-center">
+                    <h2 class="title">Meet our Founder</h2>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-sm-10 center-block text-center">
-                    <h1 class="single-block">Want to learn more? <a href="contact.html" class="btn btn-large">Get in touch</a></h1>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – GET IN TOUCH : END ============================================================= -->
-
-</main>
-
-<!-- ============================================================= MAIN : END ============================================================= -->
-		
+                {% for person in site.profiles %}
+                {% if person.name == "Dustin Graves" %}
+                <div class="col-md-12">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar">
+                                <img class="img" src="{{ person.gravatar }}">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ person.name }}</h4>
+                            <h6 class="category text-muted">{{ person.title }}</h6>
+                            <p >
+                                {{person.firstname}} {{ person.blurb }}
+                            </p>
+                        </div>
+                        <div class="card-footer justify-content-center">
+                            <a href="{{ site.social.twitter }}{{ person.twitter }}" class="btn btn-just-icon btn-link btn-twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="{{ site.social.linkedin }}{{ person.linkedin }}" class="btn btn-just-icon btn-link btn-linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

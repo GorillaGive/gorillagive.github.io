@@ -2,95 +2,130 @@
 layout: default
 ---
 
-<!-- ============================================================= MAIN ============================================================= -->
+<div class="subscribe-line subscribe-line-image" style="background-image: url('/assets/img/bg7.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+                <div class="text-center">
+                    <h2 class="title">App Market Place</h2>
+                    <p style="color: white">A growing selection of apps for nonprofit events and users</p>
+                </div>
 
-<main>
-
-    <!-- ============================================================= SECTION – PORTFOLIO ============================================================= -->
-
-    <section id="portfolio">
-
-        <div class="container inner">
-            <div class="row">
-                <div class="col-md-8 col-sm-9 center-block text-center">
-                    <header>
-                        <h1>Gorilla Give Apps</h1>
-                        <p>Check out our growing selection of apps.</p>
-                    </header>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-
-        <div class="container inner-bottom">
-            <div class="row">
-                <div class="col-sm-12 portfolio">
-
-                    <ul class="filter text-center">
-                        <li><a href="#" data-filter="*" class="active">All</a></li>
-                        <li><a href="#" data-filter=".auction">Auction</a></li>
-                        <li><a href="#" data-filter=".segment">Segment</a></li>
-                    </ul><!-- /.filter -->
-
-                    <ul class="isotope items col-3">
-                        {% for app in site.apps %}
-                        <li class="item thumb auction segment">
-                            <a href="{{ app.url }}">
-                                <figure>
-                                    <figcaption class="text-overlay">
-                                        <div class="info">
-                                            <h4>{{ app.title }}</h4>
-                                            <p>{{ app.subtitle }}</p>
-                                        </div><!-- /.info -->
-                                    </figcaption>
-                                    <img src="/{{ site.path.images }}/{{ app.images[0].title }}" alt="{{ app.title }} Image">
-                                </figure>
-                            <!--</a>-->
-                        </li><!-- /.item -->
-                        {% endfor %}
-                    </ul><!-- /.items -->
-
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – PORTFOLIO : END ============================================================= -->
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <!-- ============================================================= SECTION – SHARE ============================================================= -->
+<div class="section-light">
+<!--     *********    PROJECTS 1     *********      -->
+<div class="projects-1" id="projects-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <ul class="nav nav-pills nav-pills-rose">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#pill1" data-toggle="tab">All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pill2" data-toggle="tab">Auction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pill3" data-toggle="tab">Segment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pill3" data-toggle="tab">Nonprofit</a>
+                    </li>
+                </ul>
+                <div class="tab-content tab-space">
+                    <div class="tab-pane active" id="pill1">
+                    </div>
+                    <div class="tab-pane" id="pill2">
+                    </div>
+                    <div class="tab-pane" id="pill3">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <section id="share" class="light-bg">
-        <div class="container">
 
-            <div class="col-sm-4 reset-padding">
-                <a href="{{ site.facebook_link }}" class="btn-share-md">
-                    <p class="name">Facebook</p>
-                    <i class="icon-s-facebook"></i>
-                    <!--<p class="counter">1080</p>-->
-                </a>
-            </div><!-- /.col -->
+            <!--     *********    BLOG CARDS     *********      -->
+            <div class="cards">
+                <div class="container">
+                    <div class="row">  {% for app in site.apps %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card card-blog">
+                                <div class="card-header card-header-image">
+                                    <a href="{{ app.url }}">
+                                        <img class="img" src="/{{ site.path.images }}/{{ app.images[0].title }}" alt="{{ app.title }} Image">
+                                    </a>
+                                </div>
+                                <div class="card-body ">
+                                    <h6 class="card-category text-success">Apps for Nonprofits</h6>
+                                    <h4 class="card-title">
+                                        <a href="{{ app.url }}">{{ app.title }}</a>
+                                        {{ app.subtitle }}
+                                    </h4>
+                                    <p class="card-description">
+                                        {{ app.description }}
+                                    </p>
+                                </div>
+                                <div class="card-footer ">
+                                    <div class="author">
+                                            <img src="/{{ site.path.images }}/{{ app.logo }}" alt="{{ app.developer }} logo" class="avatar img-raised">
+                                            <span>{{ app.developer }}</span>
+                                    </div>
+                                    <div class="text-warning stats ml-auto">
+                                        <i class="material-icons">attach_money</i> {{ app.cost }}
+                                    </div>
+                                </div>
+                            </div>
 
-            <div class="col-sm-4 reset-padding">
-                <a href="{{ site.twitter_link }}" class="btn-share-md">
-                    <p class="name">Twitter</p>
-                    <i class="icon-s-twitter"></i>
-                    <!--<p class="counter">1263</p>-->
-                </a>
-            </div><!-- /.col -->
 
-            <div class="col-sm-4 reset-padding">
-                <a href="{{ site.instagram_link }}" class="btn-share-md">
-                    <p class="name">Instagram</p>
-                    <i class="icon-s-instagram"></i>
-                    <!--<p class="counter">963</p>-->
-                </a>
-            </div><!-- /.col -->
+                        </div>  {% endfor %}
+                    </div>
+                </div>
+            </div>
 
-        </div><!-- /.container -->
-    </section>
 
-    <!-- ============================================================= SECTION – SHARE : END ============================================================= -->
 
-</main>
+    </div>
+</div>
+<!--     *********    END PROJECTS 1      *********      -->
 
-<!-- ============================================================= MAIN : END ============================================================= -->
+</div>
+<div class="subscribe-line subscribe-line-image" style="background-image: url('/assets/img/examples/office2.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <h1 class="title"> Interested in listing your App?</h1>
+                <h4 style="color: white">The App Market Place is open to all organizations and developers. If you want your app listed or are unsure but want to know more, contact us now!</h4>
+            </div>
+            <div class="col-md-10 ml-auto mr-auto">
+                <div class="card card-raised card-form-horizontal">
+                    <div class="card-body ">
+                        <form method="" action="">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" value="" placeholder="Organization Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="email" value="" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button" class="btn btn-danger btn-block">Contact</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include sections/social.html %}

@@ -2,8 +2,13 @@
 layout: pages/about
 title: About Us
 header: Our Founder
-description:
+description: ""
 about: Gorilla Give is a new kind of charity platform that connects people and companies to charities in a way that has never been done before. We believe charities should have access to the same engineering resources as the top technology companies.
 who: We are a team that is passionate about technology and helping others. We are dedicated to disrupting the non profit software industry through design and technology.
 what: We want to reduce the pay to play barriers that are so heavily ingrained in the nonprofit management software industry today. We want to make it easy for those with like-minded values to come together and support the causes they believe in. This will be made possible through our hosted auction and event software, charitable giving management technology and by integrating these tools with the software you already use.
+origin1: "The origins of Gorilla Give date back to 2013 when our founder Dustin Graves was asked to help with a PowerPoint presentation for an annual fundraising auction. The leading auction software at the time was initially designed in the ’80s and not capable of handling the live portions of the event, yet was still very costly. Spreadsheets were used to manage the other portions of the event."
+origin2: "Having a background in software and technology he quickly realized the opportunity for streamlining and improving the process. The sections of the event managed by spreadsheets were replaced by simple applications that reduce human error and increase ease of use."
+origin3: "As Dustin was serving as a board member, he started helping other nonprofits with their auctions. He sought out solutions that would scale and noticed a trend, the fee associated with nonprofit software was astronomical. In addition to the excessive monthly/annual cost, the added fees ranged anywhere from 5% - 15% of the event's proceeds: most of these solutions focused solely on online giving, or online auctions. It became clear that there wasn’t a great solution that solved all the problems. The culmination of these experiences spawned the idea for Gorilla Give."
+today: "Today we are on a mission to provide transparent pricing and eliminate fees. Our engineers bring experience from Apple, TIME magazine, T-Mobile, Concur, and Northrop Grumman to name a few. Combining industry practices and experience with the needs from the nonprofit community that many of our team are members of themselves, Gorilla Give is building a platform that breaks down the barriers for nonprofits to have affordable access to world-class software designed to solve problems previously unaddressed."
+commitment: "Our commitment also goes further than this. We are pledging a combined 10% of our Time, Treasure, and Talent to give back to the nonprofit community on top of our dedication to the platform."
 ---

@@ -7,7 +7,7 @@ solutions:
       description: "Gorilla Give provides a solution for charities to manage live auctions. Manage item donations, create packages from single items, configure and track values and prices."
       icon: icon-th-list
     - title: Events
-      description: "Create and manage an event for your charity. Track user registration, payments, and more."
+      description: "Create and manage an event for your nonprofit. Track user registration, payments, and more."
       icon: icon-calendar
     - title: Technology
       description: "Gorilla Give leverages the latest technology to provide a platform and software solutions. A shared platform makes the technology affordable while still providing best in class solutions."

@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<!--     *********    PROJECTS 4     *********      -->
+<div class="projects-4" id="projects-4">
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <h2 class="title">Our Platform</h2>
+                <h5 class="description">Our products are all available on one platform. No need to use multiple pieces of software. The following is a list of our growing product line.</h5>
+                <div class="section-space"></div>
+            </div>
+        </div>
+
+        {% for product in site.products %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+
+        <div class="row">
+            {% if thecycle == 'odd' %}
+            <div class="col-md-5 ml-auto">
+                <div class="card card-background" style="background-image:url('/assets/image/{{ product.image }}')">
+                    <div class="card-body">
+                            <h2 class="card-title">{{ product.title }}</h2>
+                        <p style="font-weight: bold" class="card-description">
+                            {{ product.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% if thecycle == 'even' %}
+            <div class="d-md-none col-md-5 mr-auto">
+                <div class="card card-background" style="background-image:url('/assets/image/{{ product.image }}')">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ product.title }}</h2>
+                        <p style="font-weight: bold" class="card-description">
+                            {{ product.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            <div class="col-md-5 {% if thecycle == 'odd' %}mr-auto{% else %}ml-auto{% endif %}">
+                {% for feature in product.features %}
+                <div class="info info-horizontal">
+                    <div class="icon {{ feature.color }}">
+                        <i class="material-icons">{{ feature.icon }}</i>
+                    </div>
+                    <div class="description">
+                        <h4 class="info-title">{{ feature.title }}</h4>
+                        <p class="description">
+                            {{ feature.description }}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if thecycle == 'even' %}
+            <div class="d-none d-md-block col-md-5 mr-auto">
+                <div class="card card-background" style="background-image:url('/assets/image/{{ product.image }}')">
+                    <div class="card-body">
+                            <h2 class="card-title">{{ product.title }}</h2>
+                        <p style="font-weight: bold" class="card-description">
+                            {{ product.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        {% if product.title != site.products.last.title %}<hr>{% endif %}
+        {% endfor %}
+
+
+    </div>
+</div>
+<!--     *********    END PROJECTS 4      *********      -->
+</div>

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "dev-gorillagive-com",
+    "website-stage": "dev-gorillagive-com"
+  }
+}
