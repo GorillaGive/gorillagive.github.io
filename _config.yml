@@ -1,21 +1,97 @@
-# Cross site information
-title: Gorilla Give • Charity Platform
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Gorilla Give • Platform for Nonprofits
+description: >-
+  Here at Gorilla Give we aim to make fundraising software smarter and affordable.
+  Software shouldn't be your burden.
 tagline: World-class Fundraising and Event Software
 company: Gorilla Give
 company_title: Gorilla Give, LLC
 email: info@gorillagive.com
-phone: (425) 405-0269
-address: 10400 NE 4th St
-city: Bellevue
+phone: +1 (425) 405-0269
+phoneRaw: +14254050269
+location: WeWork Labs - Seattle
+address: 1411 4th Ave
+city: Seattle
 state: WA
-zip: 98004
-description: Here at Gorilla Give we aim to make charity software smarter and affordable. Software shouldn't be your burden.
-url: 'https://gorillagive.com'
-baseurl: /
+zip: 98101
+hours: Mon - Fri, 7:00 am - 4:00 pm (PST)
+
+
+baseurl: / # the subpath of your site, e.g. /blog
+url: "https://gorillagive.com" # the base hostname & protocol for your site, e.g. http://example.com
+
 copyright: 2016 - 2018
 include: [".well-known"]
 app_link: https://app.gorillagive.com
 support: https://suppport.gorillagive.com
+
+# Paths
+blog: blog
+contact: contact
+about: about
+app: app
+apps: apps
+pricing: pricing
+privacy: privacy
+signup: signup
+terms: terms
+
+collections:
+  apps:
+    output: true
+    permalink: /apps/:path/
+  products:
+    output: true
+
+# Custom Variables
+path:
+  css: assets/css
+  js: assets/js
+  images: assets/image
+  videos: assets/video
+  fonts: assets/fonts
+
+profiles:
+  - name: Dustin Graves
+    firstname: Dustin
+    title: Founder/Engineer
+    team: true
+    blurb: "is a Software Engineer with over 10 years of experience in designing technology solutions. He serves on the Board for the Mount Baker Council, BSA. Dustin has BS in Information Technology and has worked in several different industries including defense, telematics and media. Dustin can be found hanging out with his family or cycling."
+    gravatar: "https://2.gravatar.com/avatar/5720df6223196d28891dbe8450170dca?s=200"
+    blog: "I founded Gorilla Give because I have a passion to help others. In my free time I enjoy cycling and hanging out with my family."
+    twitter: "gravesdustin"
+    facebook:
+    linkedin: "dustincgraves"
+  - name: Lucas Casarez
+    firstname: Lucas
+    title: Founder & Certified Financial Planner
+    blurb: "is a Certified Financial Planner™ and lives with his wife and son in Fort Collins, CO. He launched his firm, Level Up Financial Planning, to create access to true financial planning for Gen X/Y families in tech. Lucas believes that serving this market greatly increases his impact on the lives of his clients than when he was at a traditional firm that limited him to working with those who already had strong financial habits and greater than $500,000 retirement assets. To find out more about Lucas or Level Up Financial Planning visit his website. <a href='http://www.levelupfinancialplanning.com'>www.levelupfinancialplanning.com</a>"
+    gravatar: "/assets/image/Lucas.png"
+    facebook: "levelupfinancialplanning"
+    twitter:
+    linkedin: "lucas-casarez-cfp%C2%AE-b47a6162"
+    youtube: "UCOtU59OKUFSqJssbYr3X8hQ"
+
+social:
+  linkedin: "https://www.linkedin.com/in/"
+  twitter: "https://twitter.com/"
+
+twitter_username: GorillaGive
+github_username:  GorillaGive
 
 # Social Media Links
 twitter_link: https://twitter.com/GorillaGive
@@ -24,33 +100,25 @@ facebook_link: https://www.facebook.com/GorillaGive
 linkedin_link: https://www.linkedin.com/company/gorilla-give
 instagram_link: https://instagr.am/gorillagive
 pinterest_link: https://www.pinterest.com/gorillagive/
-
-social:
-  linkedin: "https://www.linkedin.com/in/"
-  twitter: "https://twitter.com/"
-
-collections:
-  apps:
-    output: true
-    permalink: /apps/:path/
+youtube_link: https://www.youtube.com/channel/UC_3MCK8HBXCHnWeYzkvoquw
 
 # Build settings
 markdown: kramdown
-
-# Custom Variables
-path:
-  css: assets/css
-  js: assets/js
-  images: assets/images
-  videos: assets/video
-  fonts: assets/fonts
-
-profiles:
-  - name: Dustin Graves
-    firstname: Dustin
-    title: Founder/Engineer
-    blurb: "is a Software Engineer with over 10 years of experience in designing technology solutions. Dustin has BS in Information Technology and has worked in several different industries including defense, telematics and media. Dustin can be found hanging out with his family or cycling."
-    gravatar: "https://2.gravatar.com/avatar/5720df6223196d28891dbe8450170dca?s=200"
-    twitter: "gravesdustin"
-    facebook:
-    linkedin: "dustincgraves"
+#theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - circle.yml
+  - credits.md

@@ -2,420 +2,274 @@
 layout: default
 ---
 
-<!-- ============================================================= MAIN ============================================================= -->
 
-<main>
-
-
-    <!-- ============================================================= SECTION – BLOG POST ============================================================= -->
-
-    <section id="blog-post" class="light-bg">
-        <div class="container inner-top-sm inner-bottom classic-blog no-sidebar">
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('/{{site.path.images }}/{{page.image}}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <h1 class="title">{{ page.title }}</h1>
+                <h4>{{ page.subtitle }}</h4>
+                <br>
+                <a href="#read-article" class="btn btn-rose btn-round btn-lg">
+                    <i class="material-icons">format_align_left</i> Read Article
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<a name="read-article"></a>
+<div class="main main-raised">
+    <div class="container">
+        <div class="section section-text">
             <div class="row">
-                <div class="col-md-9 center-block">
-                    <div class="sidemeta">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <h3 class="title">{{ page.title }}</h3>
+                    {{ page.content }}
+                </div>
+            </div>
+        </div>
+        <div class="section section-blog-info">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="blog-tags">
+                                Published: <span class="month">{{page.month}}</span>
+                                <span class="day">{{page.day}},</span>
+                                <span class="month">{{page.year}}</span>
+                                {% if page.tags %}
+                               <h6 class="card-category text-info">
+                                   <p>Tags:
+                                    {% for tag in page.tags %}
+                                     <span class="badge badge-primary badge-pill">{{tag}}</span>
+                                    {% endfor %}
+                                   </p>
+                                </h6>
+                                {% endif %}
 
-                        <div class="post {{ post.format }}">
+                            </div>
+                        </div>
+                        <!--<div class="col-md-6">-->
+                            <!--<a href="#pablo" class="btn btn-google btn-round float-right">-->
+                                <!--<i class="fa fa-google"></i> 232-->
+                            <!--</a>-->
+                            <!--<a href="#pablo" class="btn btn-twitter btn-round float-right">-->
+                                <!--<i class="fa fa-twitter"></i> 910-->
+                            <!--</a>-->
+                            <!--<a href="#pablo" class="btn btn-facebook btn-round float-right">-->
+                                <!--<i class="fa fa-facebook-square"></i> 872-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    </div>
+                    <hr>
+                    {% for author in site.profiles %}
+                    {% if author.name == page.author %}
+                    <div class="card card-profile card-plain">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="card-avatar">
 
-                            <div class="date-wrapper">
-                                <div class="date">
-                                    <span class="day">{{page.day}}</span>
-                                    <span class="month">{{page.month}}</span>
-                                </div><!-- /.date -->
-                            </div><!-- /.date-wrapper -->
+                                    <a href="#pablo">
 
-                            <div class="format-wrapper">
-                                <a href="#"><i class="icon-picture"></i></a>
-                            </div><!-- /.format-wrapper -->
+                                        <img class="img" src="{{ author.gravatar }}">
+                                    </a>
+                                    <div class="ripple-container"></div>
+                                </div>
+                                <div class="card-footer justify-content-center">
+                                    {% if author.twitter %}
+                                    <a href="https://twitter.com/{{ author.twitter }}" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                                    {% endif %}
+                                    {% if author.facebook %}
+                                    <a href="https://www.facebook.com/{{ author.facebook }}" class="btn btn-just-icon btn-link btn-facebook"><i class="fa fa-facebook-square"></i></a>
+                                    {% endif %}
+                                    {% if author.linkedin %}
+                                    <a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="btn btn-just-icon btn-link btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                                    {% endif %}
+                                    {% if author.youtube %}
+                                    <a href="https://www.youtube.com/channel/{{ author.youtube }}" class="btn btn-just-icon btn-link btn-youtube"><i class="fa fa-youtube"></i></a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h4 class="card-title">{{ author.name }}</h4>
+                                <p class="description">{{ author.blurb }}</p>
+                            </div>
 
-                            <div class="post-content">
-
-                                <figure class="icon-overlay icn-link post-media">
-                                    <!--<a href="{{page.url}}">-->
-                                        <img src="/{{site.path.images }}/{{page.image}}" alt="">
-                                    <!--</a>-->
-                                </figure><!-- /.post-media -->
-
-                                <p class="author"><a href="#" title="Post author" data-rel="tooltip" data-placement="left">{{ page.author }}</a></p>
-
-                                <h1 class="post-title">{{page.title}}</h1>
-
-                                <ul class="meta">
-                                    <li class="categories"><a href="#">{{page.category}}</a></li>
-                                    <!--<li class="comments"><a href="#">24</a></li>-->
-                                    <!--<li class="likes"><a href="#">73</a></li>-->
-                                </ul><!-- /.meta -->
-
-                                {{ page.content }}
-
-                            </div><!-- /.post-content -->
-
-                        </div><!-- /.post -->
-
-                        <!--<div class="post-author">-->
-                            <!--<figure>-->
-
-                                <!--<div class="author-image icon-overlay icn-link">-->
-                                    <!--<a href="#"><img src="{{site.path.images}}/art/human01.jpg" alt=""></a>-->
+                            <!--<div class="col-md-2">-->
+                                <!--<button type="button" class="btn btn-default pull-right btn-round">Follow</button>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!--<div class="section section-comments">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-8 ml-auto mr-auto">-->
+                    <!--<div class="media-area">-->
+                        <!--<h3 class="title text-center">3 Comments</h3>-->
+                        <!--<div class="media">-->
+                            <!--<a class="float-left" href="#pablo">-->
+                                <!--<div class="avatar">-->
+                                    <!--<img class="media-object" src="../assets/img/faces/card-profile4-square.jpg" alt="...">-->
                                 <!--</div>-->
-
-                                <!--<figcaption class="author-details">-->
-                                    <!--<h3>About the author</h3>-->
-                                    <!--<p><a href="#">{{ site.profiles[0].name}}</a> {{ site.profiles[0].blurb}}</p>-->
-                                    <!--<ul class="meta">-->
-                                        <!--<li class="author-posts"><a href="#">All posts by {{site.profiles[0].firstname }}</a></li>-->
-                                        <!--&lt;!&ndash;<li class="url"><a href="#">website.com</a></li>&ndash;&gt;-->
-                                    <!--</ul>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                    <!--<ul class="social">-->
-                                        <!--<li><a href="#"><i class="icon-s-facebook"></i></a></li>-->
-                                        <!--<li><a href="#"><i class="icon-s-gplus"></i></a></li>-->
-                                        <!--<li><a href="#"><i class="icon-s-twitter"></i></a></li>-->
-                                    <!--</ul>&lt;!&ndash; /.social &ndash;&gt;-->
-                                <!--</figcaption>-->
-
-                            <!--</figure>-->
-                        <!--</div>&lt;!&ndash; /.post-author &ndash;&gt;-->
-
-                        <!--<div id="share" class="row">-->
-
-                            <!--<div class="col-sm-4 reset-padding">-->
-                                <!--<a href="#" class="btn-share-md">-->
-                                    <!--<p class="name">Facebook</p>-->
-                                    <!--<i class="icon-s-facebook"></i>-->
-                                    <!--<p class="counter">1080</p>-->
+                            <!--</a>-->
+                            <!--<div class="media-body">-->
+                                <!--<h4 class="media-heading">Tina Andrew-->
+                                    <!--<small>&#xB7; 7 minutes ago</small>-->
+                                <!--</h4>-->
+                                <!--<h6 class="text-muted"></h6>-->
+                                <!--<p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>-->
+                                <!--<div class="media-footer">-->
+                                    <!--<a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="Reply to Comment">-->
+                                        <!--<i class="material-icons">reply</i> Reply-->
+                                    <!--</a>-->
+                                    <!--<a href="#pablo" class="btn btn-danger btn-link float-right">-->
+                                        <!--<i class="material-icons">favorite</i> 243-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="media">-->
+                            <!--<a class="float-left" href="#pablo">-->
+                                <!--<div class="avatar">-->
+                                    <!--<img class="media-object" alt="Tim Picture" src="../assets/img/faces/card-profile1-square.jpg">-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<div class="media-body">-->
+                                <!--<h4 class="media-heading">John Camber-->
+                                    <!--<small>&#xB7; Yesterday</small>-->
+                                <!--</h4>-->
+                                <!--<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>-->
+                                <!--<p> Don&apos;t forget, You&apos;re Awesome!</p>-->
+                                <!--<div class="media-footer">-->
+                                    <!--<a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="Reply to Comment">-->
+                                        <!--<i class="material-icons">reply</i> Reply-->
+                                    <!--</a>-->
+                                    <!--<a href="#pablo" class="btn btn-link float-right">-->
+                                        <!--<i class="material-icons">favorite</i> 25-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                                <!--<div class="media">-->
+                                    <!--<a class="float-left" href="#pablo">-->
+                                        <!--<div class="avatar">-->
+                                            <!--<img class="media-object" alt="64x64" src="../assets/img/faces/card-profile4-square.jpg">-->
+                                        <!--</div>-->
+                                    <!--</a>-->
+                                    <!--<div class="media-body">-->
+                                        <!--<h4 class="media-heading">Tina Andrew-->
+                                            <!--<small>&#xB7; 12 Hours Ago</small>-->
+                                        <!--</h4>-->
+                                        <!--<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>-->
+                                        <!--<p> Don&apos;t forget, You&apos;re Awesome!</p>-->
+                                        <!--<div class="media-footer">-->
+                                            <!--<a href="#pablo" class="btn btn-primary btn-link float-right" rel="tooltip" title="Reply to Comment">-->
+                                                <!--<i class="material-icons">reply</i> Reply-->
+                                            <!--</a>-->
+                                            <!--<a href="#pablo" class="btn btn-link btn-secondary float-right">-->
+                                                <!--<i class="material-icons">favorite</i> 2-->
+                                            <!--</a>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<h3 class="title text-center">Post your comment</h3>-->
+                    <!--<div class="media media-post">-->
+                        <!--<a class="author float-left" href="#pablo">-->
+                            <!--<div class="avatar">-->
+                                <!--<img class="media-object" alt="64x64" src="../assets/img/faces/card-profile6-square.jpg">-->
+                            <!--</div>-->
+                        <!--</a>-->
+                        <!--<div class="media-body">-->
+                            <!--<div class="form-group label-floating bmd-form-group">-->
+                                <!--<label class="form-control-label bmd-label-floating" for="exampleBlogPost"> Write some nice stuff or nothing...</label>-->
+                                <!--<textarea class="form-control" rows="5" id="exampleBlogPost"></textarea>-->
+                            <!--</div>-->
+                            <!--<div class="media-footer">-->
+                                <!--<a href="#pablo" class="btn btn-primary btn-round btn-wd float-right">Post Comment</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; end media-post &ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+<!--<div class="section">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
+                <!--<h2 class="title text-center">Other Posts</h2>-->
+                <!--<br>-->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-4">-->
+                        <!--<div class="card card-blog">-->
+                            <!--<div class="card-header card-header-image">-->
+                                <!--<a href="#pablo">-->
+                                    <!--<img class="img img-raised" src="../assets/img/examples/blog6.jpg">-->
                                 <!--</a>-->
-                            <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-
-                            <!--<div class="col-sm-4 reset-padding">-->
-                                <!--<a href="#" class="btn-share-md">-->
-                                    <!--<p class="name">Twitter</p>-->
-                                    <!--<i class="icon-s-twitter"></i>-->
-                                    <!--<p class="counter">1263</p>-->
+                            <!--</div>-->
+                            <!--<div class="card-body">-->
+                                <!--<h6 class="category text-info">Enterprise</h6>-->
+                                <!--<h4 class="card-title">-->
+                                    <!--<a href="#pablo">Autodesk looks to future of 3D printing with Project Escher</a>-->
+                                <!--</h4>-->
+                                <!--<p class="card-description">-->
+                                    <!--Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses.-->
+                                    <!--<a href="#pablo"> Read More </a>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<div class="card card-blog">-->
+                            <!--<div class="card-header card-header-image">-->
+                                <!--<a href="#pablo">-->
+                                    <!--<img class="img img-raised" src="../assets/img/examples/blog8.jpg">-->
                                 <!--</a>-->
-                            <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-
-                            <!--<div class="col-sm-4 reset-padding">-->
-                                <!--<a href="#" class="btn-share-md">-->
-                                    <!--<p class="name">Google +</p>-->
-                                    <!--<i class="icon-s-gplus"></i>-->
-                                    <!--<p class="counter">963</p>-->
+                            <!--</div>-->
+                            <!--<div class="card-body">-->
+                                <!--<h6 class="category text-success">-->
+                                    <!--Startups-->
+                                <!--</h6>-->
+                                <!--<h4 class="card-title">-->
+                                    <!--<a href="#pablo">Lyft launching cross-platform service this week</a>-->
+                                <!--</h4>-->
+                                <!--<p class="card-description">-->
+                                    <!--Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses.-->
+                                    <!--<a href="#pablo"> Read More </a>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<div class="card card-blog">-->
+                            <!--<div class="card-header card-header-image">-->
+                                <!--<a href="#pablo">-->
+                                    <!--<img class="img img-raised" src="../assets/img/examples/blog7.jpg">-->
                                 <!--</a>-->
-                            <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-
-                        <!--</div>&lt;!&ndash; /.share &ndash;&gt;-->
-
-                        <!--<div id="accordion-related-posts" class="panel-group">-->
-                            <!--<div class="panel panel-default">-->
-
-                                <!--<div class="panel-heading">-->
-                                    <!--<h2 class="panel-title">-->
-                                        <!--<a class="panel-toggle" data-toggle="collapse" data-parent="#accordion-related-posts" href="#content-related-posts">-->
-                                            <!--<span>Related posts</span>-->
-                                        <!--</a>-->
-                                    <!--</h2>-->
-                                <!--</div>&lt;!&ndash; /.panel-heading &ndash;&gt;-->
-
-                                <!--<div id="content-related-posts" class="panel-collapse collapse in">-->
-                                    <!--<div class="panel-body">-->
-                                        <!--<div id="owl-related-posts" class="owl-carousel owl-item-gap">-->
-
-                                            <!--<div class="item">-->
-                                                <!--<figure>-->
-
-                                                    <!--<div class="icon-overlay icn-link">-->
-                                                        <!--<a href="portfolio-post5.html"><img src="assets/images/art/work08a.jpg" alt=""></a>-->
-                                                    <!--</div>&lt;!&ndash; /.icon-overlay &ndash;&gt;-->
-
-                                                    <!--<figcaption class="bordered no-top-border">-->
-                                                        <!--<div class="info">-->
-                                                            <!--<h4><a href="portfolio-post5.html">Brand Stationery</a></h4>-->
-                                                            <!--<p>Identity</p>-->
-                                                        <!--</div>&lt;!&ndash; /.info &ndash;&gt;-->
-                                                    <!--</figcaption>-->
-
-                                                <!--</figure>-->
-                                            <!--</div>&lt;!&ndash; /.item &ndash;&gt;-->
-
-                                            <!--<div class="item">-->
-                                                <!--<figure>-->
-
-                                                    <!--<div class="icon-overlay icn-link">-->
-                                                        <!--<a href="portfolio-post5.html"><img src="assets/images/art/work10.jpg" alt=""></a>-->
-                                                    <!--</div>&lt;!&ndash; /.icon-overlay &ndash;&gt;-->
-
-                                                    <!--<figcaption class="bordered no-top-border">-->
-                                                        <!--<div class="info">-->
-                                                            <!--<h4><a href="portfolio-post5.html">Tri Fold Brochure</a></h4>-->
-                                                            <!--<p>Print</p>-->
-                                                        <!--</div>&lt;!&ndash; /.info &ndash;&gt;-->
-                                                    <!--</figcaption>-->
-
-                                                <!--</figure>-->
-                                            <!--</div>&lt;!&ndash; /.item &ndash;&gt;-->
-
-                                            <!--<div class="item">-->
-                                                <!--<figure>-->
-
-                                                    <!--<div class="icon-overlay icn-link">-->
-                                                        <!--<a href="portfolio-post5.html"><img src="assets/images/art/work03.jpg" alt=""></a>-->
-                                                    <!--</div>&lt;!&ndash; /.icon-overlay &ndash;&gt;-->
-
-                                                    <!--<figcaption class="bordered no-top-border">-->
-                                                        <!--<div class="info">-->
-                                                            <!--<h4><a href="portfolio-post5.html">Vintage Bicycles</a></h4>-->
-                                                            <!--<p>Interactive</p>-->
-                                                        <!--</div>&lt;!&ndash; /.info &ndash;&gt;-->
-                                                    <!--</figcaption>-->
-
-                                                <!--</figure>-->
-                                            <!--</div>&lt;!&ndash; /.item &ndash;&gt;-->
-
-                                            <!--<div class="item">-->
-                                                <!--<figure>-->
-
-                                                    <!--<div class="icon-overlay icn-link">-->
-                                                        <!--<a href="portfolio-post5.html"><img src="assets/images/art/work18.jpg" alt=""></a>-->
-                                                    <!--</div>&lt;!&ndash; /.icon-overlay &ndash;&gt;-->
-
-                                                    <!--<figcaption class="bordered no-top-border">-->
-                                                        <!--<div class="info">-->
-                                                            <!--<h4><a href="portfolio-post5.html">Modern CD Case</a></h4>-->
-                                                            <!--<p>Print</p>-->
-                                                        <!--</div>&lt;!&ndash; /.info &ndash;&gt;-->
-                                                    <!--</figcaption>-->
-
-                                                <!--</figure>-->
-                                            <!--</div>&lt;!&ndash; /.item &ndash;&gt;-->
-
-                                            <!--<div class="item">-->
-                                                <!--<figure>-->
-
-                                                    <!--<div class="icon-overlay icn-link">-->
-                                                        <!--<a href="portfolio-post5.html"><img src="assets/images/art/work09.jpg" alt=""></a>-->
-                                                    <!--</div>&lt;!&ndash; /.icon-overlay &ndash;&gt;-->
-
-                                                    <!--<figcaption class="bordered no-top-border">-->
-                                                        <!--<div class="info">-->
-                                                            <!--<h4><a href="portfolio-post5.html">Astor & Yancy</a></h4>-->
-                                                            <!--<p>Identity</p>-->
-                                                        <!--</div>&lt;!&ndash; /.info &ndash;&gt;-->
-                                                    <!--</figcaption>-->
-
-                                                <!--</figure>-->
-                                            <!--</div>&lt;!&ndash; /.item &ndash;&gt;-->
-
-                                            <!--<div class="item">-->
-                                                <!--<figure>-->
-
-                                                    <!--<div class="icon-overlay icn-link">-->
-                                                        <!--<a href="portfolio-post5.html"><img src="assets/images/art/photograph02.jpg" alt=""></a>-->
-                                                    <!--</div>&lt;!&ndash; /.icon-overlay &ndash;&gt;-->
-
-                                                    <!--<figcaption class="bordered no-top-border">-->
-                                                        <!--<div class="info">-->
-                                                            <!--<h4><a href="portfolio-post5.html">Daydreaming</a></h4>-->
-                                                            <!--<p>Photography</p>-->
-                                                        <!--</div>&lt;!&ndash; /.info &ndash;&gt;-->
-                                                    <!--</figcaption>-->
-
-                                                <!--</figure>-->
-                                            <!--</div>&lt;!&ndash; /.item &ndash;&gt;-->
-
-                                        <!--</div>&lt;!&ndash; /.owl-carousel &ndash;&gt;-->
-                                    <!--</div>&lt;!&ndash; /.panel-body &ndash;&gt;-->
-                                <!--</div>&lt;!&ndash; /.content &ndash;&gt;-->
-
-                            <!--</div>&lt;!&ndash; /.panel &ndash;&gt;-->
-                        <!--</div>&lt;!&ndash; /.panel-group &ndash;&gt;-->
-
-                        <!--<div id="comments">-->
-                            <!--<h2>5 Comments</h2>-->
-                            <!--<ol class="commentlist">-->
-                                <!--<li class="comment">-->
-                                    <!--<div class="avatar icon-overlay icn-link">-->
-                                        <!--<a href="#"><img src="assets/images/art/human02.jpg" alt=""></a>-->
-                                    <!--</div>&lt;!&ndash; /.avatar &ndash;&gt;-->
-
-                                    <!--<div class="commentbody">-->
-
-                                        <!--<div class="author">-->
-                                            <!--<h3><a href="#">Jennifer Fox</a></h3>-->
-                                            <!--<div class="meta">-->
-                                                <!--<span class="date">about 5 hours ago</span>-->
-                                            <!--</div>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                        <!--</div>&lt;!&ndash; /.author &ndash;&gt;-->
-
-                                        <!--<div class="message">-->
-                                            <!--<p>Magnis modipsae que lib voloratati andigen daepeditem ut repro labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Doloreiur qui commolu ptatemp dolupta oreprerum aut tibusam. Eumenis et consent accullignis dentibea autem inisita posae volor conecus resto explabo que voloratati andigen emperum quiae sitiorem.</p>-->
-                                            <!--<ul class="meta">-->
-                                                <!--<li class="reply"><a href="#">Reply</a></li>-->
-                                                <!--<li class="votes">24</li>-->
-                                                <!--<li class="upvote"><a href="#"><i class="icon-thumbs-up"></i></a></li>-->
-                                                <!--<li class="downvote"><a href="#"><i class="icon-thumbs-down"></i></a></li>-->
-                                            <!--</ul>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                        <!--</div>&lt;!&ndash; /.message &ndash;&gt;-->
-
-                                    <!--</div>&lt;!&ndash; /.commentbody &ndash;&gt;-->
-                                <!--</li>&lt;!&ndash; /.comment &ndash;&gt;-->
-
-                                <!--<li class="comment">-->
-                                    <!--<div class="avatar icon-overlay icn-link">-->
-                                        <!--<a href="#"><img src="assets/images/art/human03.jpg" alt=""></a>-->
-                                    <!--</div>&lt;!&ndash; /.avatar &ndash;&gt;-->
-
-                                    <!--<div class="commentbody">-->
-
-                                        <!--<div class="author">-->
-                                            <!--<h3><a href="#">Chris Cavill</a></h3>-->
-                                            <!--<div class="meta">-->
-                                                <!--<span class="date">about 4 hours ago</span>-->
-                                            <!--</div>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                        <!--</div>&lt;!&ndash; /.author&ndash;&gt;-->
-
-                                        <!--<div class="message">-->
-                                            <!--<p>Conecus iure posaemne voloris remped modis aut accabora incim resto explaboris eictemperum quiae sitiorem. Doloreiur qui commolu ptatemp dolupta oreprerum tibusam emnis et consent accullignis.</p>-->
-                                            <!--<ul class="meta">-->
-                                                <!--<li class="reply"><a href="#">Reply</a></li>-->
-                                                <!--<li class="votes">18</li>-->
-                                                <!--<li class="upvote"><a href="#"><i class="icon-thumbs-up"></i></a></li>-->
-                                                <!--<li class="downvote"><a href="#"><i class="icon-thumbs-down"></i></a></li>-->
-                                            <!--</ul>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                        <!--</div>&lt;!&ndash; /.message &ndash;&gt;-->
-
-                                    <!--</div>&lt;!&ndash; /.commentbody &ndash;&gt;-->
-
-                                    <!--<ul class="children">-->
-                                        <!--<li class="comment">-->
-                                            <!--<div class="avatar icon-overlay icn-link">-->
-                                                <!--<a href="#"><img src="assets/images/art/human01.jpg" alt=""></a>-->
-                                            <!--</div>&lt;!&ndash; /.avatar &ndash;&gt;-->
-
-                                            <!--<div class="commentbody">-->
-
-                                                <!--<div class="author">-->
-                                                    <!--<h3><a href="#">Amber Jones</a></h3>-->
-                                                    <!--<div class="meta">-->
-                                                        <!--<span class="date">about 2 hours ago</span>-->
-                                                    <!--</div>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                                <!--</div>&lt;!&ndash; /.author &ndash;&gt;-->
-
-                                                <!--<div class="message">-->
-                                                    <!--<p>Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Magnis modipsae que lib volorati andigen daepeditem ut repro labor. Menis et consent accullignis dentibea autem inisita eictemperum quiae posae volor.</p>-->
-                                                    <!--<ul class="meta">-->
-                                                        <!--<li class="reply"><a href="#">Reply</a></li>-->
-                                                        <!--<li class="votes">20</li>-->
-                                                        <!--<li class="upvote"><a href="#"><i class="icon-thumbs-up"></i></a></li>-->
-                                                        <!--<li class="downvote"><a href="#"><i class="icon-thumbs-down"></i></a></li>-->
-                                                    <!--</ul>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                                <!--</div>&lt;!&ndash; /.message &ndash;&gt;-->
-
-                                            <!--</div>&lt;!&ndash; /.commentbody &ndash;&gt;-->
-
-                                            <!--<ul class="children">-->
-                                                <!--<li class="comment">-->
-                                                    <!--<div class="avatar icon-overlay icn-link">-->
-                                                        <!--<a href="#"><img src="assets/images/art/human04.jpg" alt=""></a>-->
-                                                    <!--</div>&lt;!&ndash; /.avatar &ndash;&gt;-->
-
-                                                    <!--<div class="commentbody">-->
-
-                                                        <!--<div class="author">-->
-                                                            <!--<h3><a href="#">Toby Evans</a></h3>-->
-                                                            <!--<div class="meta">-->
-                                                                <!--<span class="date">about 1 hour ago</span>-->
-                                                            <!--</div>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                                        <!--</div>&lt;!&ndash; /.author &ndash;&gt;-->
-
-                                                        <!--<div class="message">-->
-                                                            <!--<p>Magnis modipsae que lib voloratati andigen daep editem ut repro labor. Laceaque quiae sitiorem rest non restibsae es tumquam core posae volor remped modis volor. Doloreiur qui commolu ptatemp dolupta oreprum aut tibusam. Eumenis et consent accullignis dentibea autem inisita posae volor conecus resto explabo que voloratati andigen emperum quiae sitiorem.</p>-->
-                                                            <!--<ul class="meta">-->
-                                                                <!--<li class="reply"><a href="#">Reply</a></li>-->
-                                                                <!--<li class="votes">9</li>-->
-                                                                <!--<li class="upvote"><a href="#"><i class="icon-thumbs-up"></i></a></li>-->
-                                                                <!--<li class="downvote"><a href="#"><i class="icon-thumbs-down"></i></a></li>-->
-                                                            <!--</ul>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                                        <!--</div>&lt;!&ndash; /.message &ndash;&gt;-->
-
-                                                    <!--</div>&lt;!&ndash; /.commentbody &ndash;&gt;-->
-                                                <!--</li>&lt;!&ndash; /.comment &ndash;&gt;-->
-                                            <!--</ul>&lt;!&ndash; /.children &ndash;&gt;-->
-                                        <!--</li>&lt;!&ndash; /.comment &ndash;&gt;-->
-                                    <!--</ul>&lt;!&ndash; /.children &ndash;&gt;-->
-                                <!--</li>&lt;!&ndash; /.comment &ndash;&gt;-->
-
-                                <!--<li class="comment">-->
-                                    <!--<div class="avatar icon-overlay icn-link">-->
-                                        <!--<a href="#"><img src="assets/images/art/human05.jpg" alt=""></a>-->
-                                    <!--</div>&lt;!&ndash; /.avatar &ndash;&gt;-->
-
-                                    <!--<div class="commentbody">-->
-
-                                        <!--<div class="author">-->
-                                            <!--<h3><a href="#">Sophie Adams</a></h3>-->
-                                            <!--<div class="meta">-->
-                                                <!--<span class="date">about 20 minutes ago</span>-->
-                                            <!--</div>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                        <!--</div>&lt;!&ndash; /.author &ndash;&gt;-->
-
-                                        <!--<div class="message">-->
-                                            <!--<p>Conecus iure posae volor remped modisatae aut accabora incim resto explaboris eictemperum quiae sitiorem. Doloreiur qui commolu ptatemp dolupta oreprerum tibusam emnis et consent accullignis. Doloreiur qui commolu ptatemp dolupta oreprerum aut tibusam. Eumenis et consent accullignis dentibea autem inisita posae volor conecus resto explabo voloratati andigen emperum quiae sitiorem rest non restibsae.</p>-->
-                                            <!--<ul class="meta">-->
-                                                <!--<li class="reply"><a href="#">Reply</a></li>-->
-                                                <!--<li class="votes">3</li>-->
-                                                <!--<li class="upvote"><a href="#"><i class="icon-thumbs-up"></i></a></li>-->
-                                                <!--<li class="downvote"><a href="#"><i class="icon-thumbs-down"></i></a></li>-->
-                                            <!--</ul>&lt;!&ndash; /.meta &ndash;&gt;-->
-                                        <!--</div>&lt;!&ndash; /.message &ndash;&gt;-->
-
-                                    <!--</div>&lt;!&ndash; /.commentbody &ndash;&gt;-->
-                                <!--</li>&lt;!&ndash; /.comment &ndash;&gt;-->
-                            <!--</ol>&lt;!&ndash; /.commentlist &ndash;&gt;-->
-                        <!--</div>&lt;!&ndash; /#comments &ndash;&gt;-->
-
-                        <!--<div class="comment-form-wrapper">-->
-                            <!--<h2>Leave a Comment</h2>-->
-
-                            <!--<form id="commentform" class="forms" action="" method="post">-->
-
-                                <!--<div class="row">-->
-                                    <!--<div class="col-sm-6">-->
-                                        <!--<input type="text" name="name" class="form-control" placeholder="Name (Required)">-->
-                                    <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-                                <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
-
-                                <!--<div class="row">-->
-                                    <!--<div class="col-sm-6">-->
-                                        <!--<input type="email" name="email" class="form-control" placeholder="Email (Required)">-->
-                                    <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-                                <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
-
-                                <!--<div class="row">-->
-                                    <!--<div class="col-sm-6">-->
-                                        <!--<input type="text" name="website" class="form-control" placeholder="Website">-->
-                                    <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-                                <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
-
-                                <!--<div class="row">-->
-                                    <!--<div class="col-sm-12">-->
-                                        <!--<textarea name="message" class="form-control" placeholder="Enter your comment ..."></textarea>-->
-                                    <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
-                                <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
-
-                                <!--<button type="submit" class="btn btn-default btn-submit">Submit comment</button>-->
-
-                            <!--</form>-->
-
-                            <!--<div id="response"></div>-->
-                        <!--</div>&lt;!&ndash; /.comment-form-wrapper &ndash;&gt;-->
-
-                    </div><!-- /.sidemeta -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – BLOG POST : END ============================================================= -->
-
-</main>
-
-<!-- ============================================================= MAIN : END ============================================================= -->
+                            <!--</div>-->
+                            <!--<div class="card-body">-->
+                                <!--<h6 class="category text-danger">-->
+                                    <!--<i class="material-icons">trending_up</i> Enterprise-->
+                                <!--</h6>-->
+                                <!--<h4 class="card-title">-->
+                                    <!--<a href="#pablo">6 insights into the French Fashion landscape</a>-->
+                                <!--</h4>-->
+                                <!--<p class="card-description">-->
+                                    <!--Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses.-->
+                                    <!--<a href="#pablo"> Read More </a>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->

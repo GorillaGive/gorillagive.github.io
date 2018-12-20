@@ -1,53 +1,135 @@
-<footer class="dark-bg">
-  <div class="container inner">
-    <div class="row">
-      <div class="col-md-4 col-sm-6 inner">
-        <h4>Who we are</h4>
-        <a class="navbar-brand" href="/"><img class="logo img-intext" src="/{{ site.path.images }}/gorilla-long.svg" alt=""></a>
-        <p>{{ site.description }}</p>
-        <a href="/{{ 'about' }}" class="txt-btn">More about us</a>
-      </div>
-      <div class="col-md-4 col-sm-6 inner">
-        <h4>Solutions</h4>
-        <div class="row thumbs gap-xs">
-          <div class="col-xs-4 thumb">
-            <figure class="icon-overlay icn-link">
-              <a href="#"><img src="/{{ site.path.images }}/bid.png" alt=""></a>
-            </figure>
-          </div>
-          <div class="col-xs-4 thumb">
-            <figure class="icon-overlay icn-link">
-              <a href="#"><img src="/{{ site.path.images }}/events.png" alt=""></a>
-            </figure>
-          </div>
-          <div class="col-xs-4 thumb">
-            <figure class="icon-overlay icn-link">
-              <a href="#"><img src="/{{ site.path.images }}/apps.png" alt=""></a>
-            </figure>
-          </div>
-
+<!--     *********    BIG WHITE FOOTER V2     *********      -->
+<footer class="footer footer-black footer-big">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/">
+                        <h5>Gorilla Give</h5>
+                    </a>
+                    <p>Empowering successful fundraising through a suite of integrated, modern, and accessible tools.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>About</h5>
+                    <ul class="links-vertical">
+                        <li>
+                            <a href="{{ site.blog }}">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ site.about }}">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ site.contact }}">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="col-md-2">-->
+                    <!--<h5>Market</h5>-->
+                    <!--<ul class="links-vertical">-->
+                        <!--<li>-->
+                            <!--<a href="{{ site.pricing }}/#faq">-->
+                                <!--Sales FAQ-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#pablo">-->
+                                <!--How to Register-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#pablo">-->
+                                <!--Sell Goods-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#pablo">-->
+                                <!--Receive Payment-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<a href="#pablo">-->
+                                <!--Transactions Issues-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <div class="col-md-2">
+                    <h5>Legal</h5>
+                    <ul class="links-vertical">
+                        <li>
+                            <a href="{{ site.terms }}">
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ site.privacy }}">
+                                Privacy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Subscribe to Newsletter</h5>
+                    <p>
+                        Join our newsletter and get news in your inbox every month! We hate spam too, so we won't do that.
+                    </p>
+                    <form class="form form-newsletter validate" action="https://gorillagive.us18.list-manage.com/subscribe/post?u=bce033e07038a450c7d446ca4&amp;id=a08bc23820" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                        <div class="form-group">
+                            <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" style="color:#ffffff" placeholder="email address" required>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bce033e07038a450c7d446ca4_a08bc23820" tabindex="-1" value=""></div>
+                        </div>
+                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-danger btn-just-icon">
+                            <i class="material-icons">mail</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4 col-sm-6 inner">
-        <h4>Get In Touch</h4>
-        <ul class="contacts">
-           <li><i class="icon-location contact"></i> {{ site.address }}, {{ site.city }}, {{site.state }}, {{ site.zip }} </li>
-           <li><i class="icon-phone contact"></i> {{ site.phone }}</li>
-          <li><a href="/{{ 'contact' }}"><i class="icon-mail-1 contact"></i> {{ site.email }}</a></li>
+        <hr>
+        <ul class="social-buttons">
+            <li>
+                <a href="{{ site.twitter_link }}" class="btn btn-just-icon btn-link btn-twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.facebook_link}}" class="btn btn-just-icon btn-link btn-facebook">
+                    <i class="fa fa-facebook-square"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.pinterest_link }}" class="btn btn-just-icon btn-link btn-pinterest">
+                    <i class="fa fa-pinterest"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.instagram_link }}" class="btn btn-just-icon btn-link btn-instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.youtube_link}}" class="btn btn-just-icon btn-link btn-youtube">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.linkedin_link }}" class="btn btn-just-icon btn-link btn-linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
         </ul>
-      </div>
+        <div class="copyright pull-center">
+            Copyright &#xA9;
+            <script>
+                document.write(new Date().getFullYear())
+            </script> Gorilla Give All Rights Reserved.
+        </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container inner">
-      <p class="pull-left">© {{ site.copyright }} {{ site.company_title }} All rights reserved.</p>
-      <ul class="footer-menu pull-right">
-        <li><a href="/">Home</a></li>
-        <li><a href="/{{ 'about' }}">About</a></li>
-        <li><a href="/{{ 'contact' }}">Contact</a></li>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/terms">Terms</a></li>
-      </ul>
-    </div>
-  </div>
 </footer>
+<!--     *********   END BIG WHITE FOOTER v2     *********      -->

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+
+{% include index_nav.html %}
+{% include sections/index_header.html %}
+    <div class="main">
+        <div class="section-space"></div>
+        {{ content }}
+    </div>
+{% include footer.html %}
+{% include js.html %}
+
+</body>
+</html>

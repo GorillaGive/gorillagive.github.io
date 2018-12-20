@@ -1,146 +1,114 @@
 ---
 layout: default
 ---
+<div class="profile-page sidebar-collapse">
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('/{{site.path.images}}/stars-background.png');"></div>
+<div class="main main-raised">
 
-<!-- ============================================================= MAIN ============================================================= -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-7 mr-auto ml-auto text-center">
+            <h2 class="title">{{ page.title }}</h2>
+            <h4 class="title">{{ page.subtitle }}</h4>
+        </div>
+    </div>
+    <div class="row">
 
-<main>
+    <div class="col-md-6 ml-auto">
+        <img src="/{{site.path.images}}/{{ page.icon }}" style="max-height:400px;max-width:100%;margin:auto;display:block" class=" ml-auto rounded" alt="app logo">
+        <div class="section-space"></div>
 
-    <!-- ============================================================= SECTION – PORTFOLIO POST ============================================================= -->
+    </div>
+    <div class="col-md-6 mr-auto ml-auto stats">
+    <p>{{ page.description }}</p>
 
-    <section id="portfolio-post">
-        <div class="container inner-top-md">
-            <div class="row">
-
-                <div class="col-md-8">
-                    <div id="owl-work" class="owl-carousel owl-inner-pagination owl-inner-nav owl-ui-md">
-                        {% for image in page.images %}
-                        <div class="item">
-                            <figure>
-                                <img src="/{{ site.path.images }}/{{ image.title }}" alt="">
-                            </figure>
-                        </div><!-- /.item -->
-                        {% endfor %}
-                    </div><!-- /.owl-carousel -->
-                </div><!-- /.col -->
-
-                <div class="col-md-4 inner-left-sm">
-                    <header>
-                        <h2>{{ page.title}}</h2>
-                        <a href="https://app.gorillagive.com/apps" class="btn btn-large">Launch Apps</a>
-                        <p class="text-small">{{ page.subtitle }}</p>
-                        <p class="text-small">{{ page.content }}</p>
-
-                        <ul class="item-details inner-top-xs outer-top-xs border-top">
-                            <li class="date">{{ page.month }} {{page.day}}, {{ page.year }}</li>
-                            <li class="categories">{{ page.tags }}</li>
-                            <li class="client">Gorilla Give</li>
-                            <li class="url"><a href="https://app.gorillagive.com">app.gorillagive.com</a></li>
-                        </ul><!-- /.item-details -->
-                    </header>
-                </div><!-- /.col -->
-
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-
-    </section>
-
-    <!-- ============================================================= SECTION – PORTFOLIO POST : END ============================================================= -->
+            <div class="submit">
+                <a href="https://app.gorillagive.com/apps"><button class="btn btn-primary btn-raised" name="getApp" id="getApp">Get App</button></a>
+            </div>
 
 
-    <!-- ============================================================= SECTION – MORE WORKS ============================================================= -->
 
-    <section id="more-works">
-        <div class="container inner-top-sm inner-bottom">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div id="accordion" class="panel-group blank">
-                        <div class="panel panel-default">
+        <h4 class="title">Categories</h4>
+        {% for category in page.categories %}
+        <span class="badge badge-rose">{{ category }}</span>
+        {% endfor %}
+        <hr>
 
-                            <div class="panel-heading text-center">
-                                <h4 class="panel-title">
-                                    <a class="panel-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#content">
-                                        <span>More apps</span>
-                                    </a>
-                                </h4>
-                            </div><!-- /.panel-heading -->
+        <h4 class="title">Tags</h4>
+        {% for tag in page.tags %}
+        <span class="badge badge-info">{{ tag }}</span>
+        {% endfor %}
+        <hr>
+        <h4 class="title">Supported Browsers</h4>
+        {% for browser in page.compatibility-browser %}
+        <i class="fa fa-{{ browser }}"></i>
+        {% endfor %}
 
-                            <div id="content" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <div class="portfolio">
+    </div>
+    </div>
+    <div class="row">
 
-                                        <ul class="filter text-center">
-                                            <li><a href="#" data-filter="*" class="active">All</a></li>
-                                            <li><a href="#" data-filter=".auction">Auction</a></li>
-                                            <li><a href="#" data-filter=".segment">Segment</a></li>
-                                        </ul><!-- /.filter -->
-
-                                        <ul class="isotope items col-3">
-                                            {% for app in site.apps %}
-                                            <li class="item thumb auction segment">
-                                                <a href="{{ app.url }}">
-                                                    <figure>
-                                                        <figcaption class="text-overlay">
-                                                            <div class="info">
-                                                                <h4>{{ app.title }}</h4>
-                                                                <p>{{ app.subtitle }}</p>
-                                                            </div><!-- /.info -->
-                                                        </figcaption>
-                                                        <img src="/{{ site.path.images }}/{{ app.images[0].title }}" alt="{{ app.title }} Image">
-                                                    </figure>
-                                                    <!--</a>-->
-                                            </li><!-- /.item -->
-                                            {% endfor %}
-                                        </ul><!-- /.items -->
-
-                                    </div><!-- /.portfolio -->
-                                </div><!-- /.panel-body -->
-                            </div><!-- /.content -->
-
-                        </div><!-- /.panel -->
-                    </div><!-- /.accordion -->
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – MORE WORKS : END ============================================================= -->
-
-
-    <!-- ============================================================= SECTION – SHARE ============================================================= -->
-
-    <section id="share" class="light-bg">
+        <div class="col-sm-12">
+            <p>
+                {{ page.content }}
+            </p>
+        </div>
+        <!--<div class="section-space"></div>-->
+    </div>
+</div>
+    <!--     *********    TESTIMONIALS 2     *********      -->
+    <div class="testimonials-2">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carouselExampleIndicatorss" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            {% for testamonial in page.testamonials %}
+                            {% if forloop.index == 1 %}
+                            <div class="carousel-item active">
+                            {% else %}
+                            <div class="carousel-item">
+                            {% endif %}
+                                <div class="card card-testimonial card-plain">
 
-            <div class="col-sm-4 reset-padding">
-                <a href="{{ site.facebook_link }}" class="btn-share-md">
-                    <p class="name">Facebook</p>
-                    <i class="icon-s-facebook"></i>
-                    <!--<p class="counter">1080</p>-->
-                </a>
-            </div><!-- /.col -->
+                                    <h2 class="title">App Reviews</h2>
+                                    <!--<div class="card-avatar">-->
+                                        <!--<a href="#pablo">-->
+                                            <!--<img class="img" src="./assets/img/faces/kendall.jpg">-->
+                                        <!--</a>-->
+                                    <!--</div>-->
+                                    <div class="card-body">
+                                        <h5 class="card-description">"{{ testamonial.text }}"
+                                        </h5>
+                                        <h4 class="card-title">{{ testamonial.name }}</h4>
+                                        <h5>{{ testamonial.org }}</h5>
+                                        <h6 class="card-category text-muted">{{ testamonial.title }}</h6>
+                                        <div class="footer">
 
-            <div class="col-sm-4 reset-padding">
-                <a href="{{ site.twitter_link }}" class="btn-share-md">
-                    <p class="name">Twitter</p>
-                    <i class="icon-s-twitter"></i>
-                    <!--<p class="counter">1263</p>-->
-                </a>
-            </div><!-- /.col -->
-
-            <div class="col-sm-4 reset-padding">
-                <a href="{{ site.instagram_link }}" class="btn-share-md">
-                    <p class="name">Instagram</p>
-                    <i class="icon-s-instagram"></i>
-                    <!--<p class="counter">963</p>-->
-                </a>
-            </div><!-- /.col -->
-
-        </div><!-- /.container -->
-    </section>
-
-    <!-- ============================================================= SECTION – SHARE : END ============================================================= -->
-
-</main>
-
-<!-- ============================================================= MAIN : END ============================================================= -->
+                                            {% for i in (1..testamonial.stars) %}
+                                            <i class="material-icons text-warning">star</i>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicatorss" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicatorss" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--     *********    END TESTIMONIALS 2      *********      -->
+    </div>
+</div>
+</div>
+</div>

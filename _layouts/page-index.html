@@ -1,87 +1,9 @@
 ---
-layout: default
+layout: index
 ---
 <!-- ============================================================= MAIN ============================================================= -->
 
 <main>
-  <!-- ============================================================= SECTION – HERO ============================================================= -->
-  <section id="hero" class="video">
-      <div id="owl-main" class="owl-carousel height-md owl-inner-nav owl-ui-lg">
-        <div class="item" style="background-color: transparent;">
-
-          <div class="container">
-            <div class="caption vertical-center text-center">
-
-              <h1 class="fadeInDown-1 light-color">A platform for <br>Charities, People, and Businesses</h1>
-              <p class="fadeInDown-2 medium-color">Charities can work smarter with donors and businesses.</p>
-              <div class="fadeInDown-3">
-                <a href="{{ site.app_link }}" class="btn btn-large">Get started now</a>
-              </div><!-- /.fadeIn -->
-
-            </div><!-- /.caption -->
-          </div><!-- /.container -->
-
-        </div><!-- /.item -->
-
-        <div class="item" style="background-color: transparent;">
-          <div class="container">
-            <div class="caption vertical-center text-right">
-
-              <h1 class="fadeInLeft-1 light-color">Premium and <br>Affordable</h1>
-              <p class="fadeInLeft-2 light-color">Manage your benefit auction or other event. <br>Keep more money for the causes you care about.</p>
-              <div class="fadeInLeft-3">
-                <a href="{{ site.app_link }}/signup" class="btn btn-large">Get started now</a>
-              </div><!-- /.fadeIn -->
-
-            </div><!-- /.caption -->
-          </div><!-- /.container -->
-        </div><!-- /.item -->
-
-        <!--<div class="item" style="background-color: transparent;">-->
-          <!--<div class="container">-->
-            <!--<div class="caption vertical-center text-left">-->
-
-              <!--<h1 class="fadeInRight-1 dark-bg light-color"><span>Clean and <br>reusable code</span></h1>-->
-              <!--<p class="fadeInRight-2 light-color">The clean code allows you to easily copy code blocks from content <br>modules and past them in different places or layouts.</p>-->
-              <!--<div class="fadeInRight-3">-->
-                <!--<a href="#" class="btn btn-large">Get started now</a>-->
-              <!--</div>&lt;!&ndash; /.fadeIn &ndash;&gt;-->
-
-            <!--</div>&lt;!&ndash; /.caption &ndash;&gt;-->
-          <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
-        <!--</div>&lt;!&ndash; /.item &ndash;&gt;-->
-
-        <div class="item" style="background-color: transparent;">
-          <div class="container">
-            <div class="caption vertical-top text-right">
-
-              <h1 class="fadeIn-1 dark-bg light-color"><span>Just focus on <br>your charity</span></h1>
-              <p class="fadeIn-2 light-color">Take a break from frustration and <br>let Gorilla Give do all the heavy lifting.</p>
-              <div class="fadeIn-3">
-                <a href="{{ site.app_link }}/signup" class="btn btn-large">Get started now</a>
-              </div><!-- /.fadeIn -->
-
-            </div><!-- /.caption -->
-          </div><!-- /.container -->
-        </div><!-- /.item -->
-
-        <div class="item" style="background-color: transparent;">
-          <div class="container">
-            <div class="caption vertical-top text-center">
-
-              <h1 class="fadeInDown-1 light-color">Connect with volunteers for <br>your charity</h1>
-              <p class="fadeInDown-2 medium-color">Gorilla Give is building social into all of our products.<br>You just have to use our product to take advantage.</p>
-              <div class="fadeInDown-3">
-                <a href="{{ site.app_link }}/signup" class="btn btn-large">Get started now</a>
-              </div><!-- /.fadeIn -->
-
-            </div><!-- /.caption -->
-          </div><!-- /.container -->
-        </div><!-- /.item -->
-      </div><!-- /.owl-carousel -->
-  </section>
-
-  <!-- ============================================================= SECTION – HERO : END ============================================================= -->
 
 
   <!-- ============================================================= SECTION – PRODUCT ============================================================= -->
@@ -90,71 +12,78 @@ layout: default
     <div class="container inner">
 
       <div class="row">
-
-        <div class="col-sm-6 inner-right-xs text-right">
-          <figure><img src="/assets/images/art/platform.png" alt=""></figure>
+        <div class="col-sm-6 ml-auto">
+          <figure><img src="/{{ site.path.images }}/cloud-platform.png" style="max-height:400px;max-width:100%;margin:auto;display:block" class="rounded" alt="platform image"></figure>
         </div><!-- /.col -->
 
         <div class="col-sm-6 inner-top-xs inner-left-xs">
           <h2>A platform with solutions for all your fundraising needs</h2>
-          <p>We have a lot of work to do. Gorilla Give is committed to a suite of software solutions for all your needs. Whether you are a small charity or an international one we will have solutions for you every step of the way.</p>
-          <a href="#" class="txt-btn">Check out the Beta</a>
+          <p>We have a suite of software solutions for all your needs. Whether you are a small nonprofit or an international one we will have solutions for you every step of the way.</p>
+          <a href="/{{ 'products' }}" class="txt-btn">View Products</a>
         </div><!-- /.col -->
 
       </div><!-- /.row -->
-
+      <div class="section-space"></div>
       <div class="row inner-top-md">
-
-        <div class="col-sm-6 col-sm-push-6 inner-left-xs">
-          <figure><img src="/assets/images/art/apps.png" alt=""></figure>
+        <div class="d-sm-none col-sm-6 col-sm-push-6 inner-left-xs">
+          <figure><img src="/{{ site.path.images }}/app-construction.png" style="max-height:300px;max-width:100%;margin:auto;display:block" class="rounded" alt="apps under construction"></figure>
         </div><!-- /.col -->
-
-        <div class="col-sm-6 col-sm-pull-6 inner-top-xs inner-right-xs">
+        <div class="col-sm-6 ml-auto">
           <h2>A growing selection of apps</h2>
           <p>We are working on adding more apps to not only help manage your events, auctions, etc., but also smaller segments of your events.</p>
-          <a href="#" class="txt-btn">Learn more about apps</a>
+          <a href="/{{ 'apps' }}" class="txt-btn">Learn More About Apps</a>
         </div><!-- /.col -->
 
-      </div><!-- /.row -->
+        <div class="d-none d-sm-block col-sm-6 col-sm-push-6 inner-left-xs mr-auto">
+          <figure><img src="/{{ site.path.images }}/app-construction.png" style="max-height:300px;max-width:100%;margin:auto;display:block" class="rounded" alt="apps under construction"></figure>
+        </div><!-- /.col -->
 
+
+
+      </div><!-- /.row -->
+      <div class="section-space"></div>
       <div class="row inner-top-md">
 
-        <div class="col-sm-6 inner-right-xs text-right">
-          <figure><img src="/assets/images/art/social.png" alt=""></figure>
+        <div class="col-sm-6">
+          <figure><img src="/{{ site.path.images }}/volunteer_connect.jpeg" style="max-height:300px;max-width:100%;margin:auto;display:block" class="rounded" alt="thumbs up"></figure>
         </div><!-- /.col -->
 
         <div class="col-sm-6 inner-top-xs inner-left-xs">
-          <h2>Social media made even easier</h2>
-          <p>We are not here to replace existing social media. We are integrating our solutions with existing social networks. Manage your event from 1 location and update all your networks.</p>
-          <a href="/{{'signup'}}" class="txt-btn">Sign up for the Beta</a>
+          <h2>Connect with Volunteers</h2>
+          <p>Managing volunteers is simplified with our tools for your organization and volunteers to easily communicate availability and status via the platform.</p>
+          <!--<a href="/{{'volunteers'}}" class="txt-btn">Learn More</a>-->
         </div><!-- /.col -->
 
       </div><!-- /.row -->
 
     </div><!-- /.container -->
   </section>
+  <div class="section-space"></div>
 
   <!-- ============================================================= SECTION – PRODUCT : END ============================================================= -->
 
 
   <!-- ============================================================= SECTION – VISIT OUR STORE ============================================================= -->
 
-  <section id="visit-our-store" class="img-bg img-bg-soft tint-bg" style="background-image: url(assets/images/art/image-background04.jpg);">
-    <div class="container inner">
-
-      <div class="row">
-        <div class="col-md-8 col-sm-9">
-          <header>
-            <h1>Signup Today!</h1>
-            <p>Sign up to get early access to our private beta.</p>
-          </header>
-          <a href="/{{'signup'}}" class="btn btn-large">Sign Up</a>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-
-    </div><!-- /.container -->
-  </section>
-
+  <!--&lt;!&ndash;     *********    IMAGE SUBSCRIBE LINE     *********      &ndash;&gt;-->
+  <!--<div class="subscribe-line section-light-gray">-->
+    <!--<div class="container">-->
+      <!--<div class="row">-->
+        <!--<div class="col-md-6 ml-auto mr-auto">-->
+          <!--<div class="text-center">-->
+            <!--<h3 class="title">Signup Today!</h3>-->
+            <!--<p class="description">-->
+              <!--Sign up to access to our beta.-->
+            <!--</p>-->
+          <!--</div>-->
+          <!--<div class="row justify-content-center">-->
+            <!--<a href="/{{'signup'}}" class="btn btn-large btn-primary">Sign Up</a>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;     *********   IMAGE SUBSCRIBE LINE     *********      &ndash;&gt;-->
   <!-- ============================================================= SECTION – VISIT OUR STORE : END ============================================================= -->
 
 
@@ -276,22 +205,42 @@ layout: default
 
   <!-- ============================================================= SECTION – GET IN TOUCH ============================================================= -->
 
-  <section id="get-in-touch" class="inner-bottom">
-    <div class="container inner light-bg">
+  <!--<section id="get-in-touch" class="inner-bottom">-->
+    <!--<div class="container inner light-bg">-->
+      <!--<div class="row">-->
+        <!--<div class="col-md-8 col-sm-9 justify-content-center">-->
+          <!--<header>-->
+            <!--<h1>Need help getting started?</h1>-->
+            <!--<p>Send us a message and let us know how we can help.</p>-->
+          <!--</header>-->
+          <!--<a href="/contact" class="btn btn-large btn-primary">Get in touch</a>-->
+        <!--</div>&lt;!&ndash; /.col &ndash;&gt;-->
+      <!--</div>&lt;!&ndash; /.row &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
+  <!--</section>-->
+  <!--     *********    IMAGE SUBSCRIBE LINE     *********      -->
+  <div class="subscribe-line subscribe-line-image" style="background-image: url('./assets/img/bg7.jpg');">
+    <div class="container">
       <div class="row">
-        <div class="col-md-8 col-sm-9 center-block text-center">
-          <header>
-            <h1>Need help getting started?</h1>
-            <p>Send us a message and let us know how we can help.</p>
-          </header>
-          <a href="/contact" class="btn btn-large">Get in touch</a>
-        </div><!-- /.col -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section>
+        <div class="col-md-6 ml-auto mr-auto">
+          <div class="text-center">
+            <header style="color: white">
+              <h1>Need help getting started?</h1>
+              <p>Send us a message and let us know how we can help.</p>
+            </header>
 
+          </div>
+          <div class="row justify-content-center">
+            <a href="/contact" class="btn btn-large btn-danger">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--     *********   IMAGE SUBSCRIBE LINE     *********      -->
   <!-- ============================================================= SECTION – GET IN TOUCH : END ============================================================= -->
 
+  {% include sections/social.html %}
 </main>
 
 <!-- ============================================================= MAIN : END ============================================================= -->
