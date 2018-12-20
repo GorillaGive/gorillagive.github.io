@@ -7,4 +7,3 @@ _site
 *.DS_Store*
 .idea
 _sass
-.old.Gemfile.lock
