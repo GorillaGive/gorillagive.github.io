@@ -62,6 +62,13 @@ layout: custom
 
 {% include footer.html %}
 {% include js.html %}
+<script>
+document.getElementById("input_2").disabled = true;
+function enableBtn(){
+    document.getElementById("input_2").disabled = false;
+   }
+</script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <!--  Google Maps Plugin  -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANmijsih_yRf4QNIf1UtSvP7CngyHFhlc"></script>
 <script type="text/javascript" src="{{ site.path.js }}/map.js"></script>
