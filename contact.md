@@ -27,6 +27,7 @@ title: Contact Us
             <label class="form-control-label bmd-label-floating" for="input_4"> Your message<span class="asterisk">*</span></label>
             <textarea  id="input_4" class="form-control required" name="q4_message4" rows="6"></textarea>
         </div>
+        <input type="hidden" id="input_11" class="form-hidden form-widget widget-required " name="q11_typeA" value="" />
         <style>
             /* already defined in bootstrap4 */
             .text-xs-center {
